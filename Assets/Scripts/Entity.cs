@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : ScriptableObject{
+public class Entity : ScriptableObject
+{
   public string Name;
   public int Age;
   string Faction;
@@ -27,4 +28,3 @@ public class Entity : ScriptableObject{
     Entity.TakeDamage(Strength);
   }
 }
-
