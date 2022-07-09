@@ -36,11 +36,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Entity.cs" />
-     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
-     <Compile Include="Assets\Scripts\FollowCamera.cs" />
-     <Compile Include="Assets\Scripts\NavigationPrompt.cs" />
+     <Compile Include="Assets\Scripts\Classes\Player.cs" />
+     <Compile Include="Assets\Scripts\Navigation\NavigationPrompt.cs" />
+     <Compile Include="Assets\Scripts\Navigation\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\Classes\Entity.cs" />
+     <Compile Include="Assets\Scripts\Navigation\CharacterMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawnManager.cs" />
+     <Compile Include="Assets\Scripts\Classes\MySingletonManager.cs" />
+     <Compile Include="Assets\Scripts\Classes\MySingletonManager2.cs" />
+     <Compile Include="Assets\Scripts\Sorting.cs" />
+     <Compile Include="Assets\Scripts\Classes\ConversationEntry.cs" />
+     <Compile Include="Assets\Scripts\Classes\Conversation.cs" />
+     <Compile Include="Assets\Scripts\Classes\ConversationComponent.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2021.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
