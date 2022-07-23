@@ -380,6 +380,7 @@
 "Assets/Scripts/Message/MessagingClientBroadcast.cs"
 "Assets/Scripts/Message/MessagingClientReceiver.cs"
 "Assets/Scripts/Message/MessagingManager.cs"
+"Assets/Scripts/MultiConversationSorting.cs"
 "Assets/Scripts/Navigation/CharacterMovement.cs"
 "Assets/Scripts/Navigation/FollowCamera.cs"
 "Assets/Scripts/Navigation/NavigationPrompt.cs"

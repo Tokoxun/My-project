@@ -2,7 +2,6 @@
 
 public class MessagingClientReceiver : MonoBehaviour
 {
-    private int ignore;
     void Start()
     {
         MessagingManager.Instance.Subscribe(ThePlayerIsTryingToLeave);
@@ -23,11 +22,6 @@ public class MessagingClientReceiver : MonoBehaviour
                 }
             }
         }
-    //    if (ignore >= 1)
-    //    {
-        
-    //    }
-    // ignore += 1;
     }
 
     void OnDestroy()
