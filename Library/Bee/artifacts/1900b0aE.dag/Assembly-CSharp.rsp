@@ -379,6 +379,7 @@
 "Assets/Scripts/Message/ConversationEntry.cs"
 "Assets/Scripts/Message/MessagingClientBroadcast.cs"
 "Assets/Scripts/Message/MessagingClientReceiver.cs"
+"Assets/Scripts/Message/MessagingClientReceiverMayorAndShopkeep.cs"
 "Assets/Scripts/Message/MessagingManager.cs"
 "Assets/Scripts/MultiConversationSorting.cs"
 "Assets/Scripts/Navigation/CharacterMovement.cs"

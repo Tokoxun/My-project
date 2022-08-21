@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Classes\Player.cs" />
+     <Compile Include="Assets\Scripts\Message\MessagingClientReceiver.cs" />
      <Compile Include="Assets\Scripts\Message\ConversationEntry.cs" />
      <Compile Include="Assets\Scripts\Navigation\NavigationPrompt.cs" />
      <Compile Include="Assets\Scripts\Classes\MySingletonManager2.cs" />
@@ -52,9 +53,9 @@
      <Compile Include="Assets\Scripts\Message\MessagingManager.cs" />
      <Compile Include="Assets\Scripts\EnemySpawnManager.cs" />
      <Compile Include="Assets\Scripts\Npc.cs" />
-     <Compile Include="Assets\Scripts\Classes\MySingletonManager.cs" />
-     <Compile Include="Assets\Scripts\Message\MessagingClientReceiver.cs" />
      <Compile Include="Assets\Scripts\MultiConversationSorting.cs" />
+     <Compile Include="Assets\Scripts\Classes\MySingletonManager.cs" />
+     <Compile Include="Assets\Scripts\Message\MessagingClientReceiverMayorAndShopkeep.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2021.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
