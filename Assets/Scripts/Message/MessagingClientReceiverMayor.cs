@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-public class MessagingClientReceiver : MonoBehaviour
+public class MessagingClientReceiverMayor : MonoBehaviour
 {
-    void Start()
-    {
-        MessagingManager.Instance.Subscribe(ThePlayerIsTryingToLeave);
-    }
+    // void Start()
+    // {
+    //     MessagingManager.Instance.Subscribe(ThePlayerIsTryingToLeave);
+    // }
 
-    void ThePlayerIsTryingToLeave()
+    public void ThePlayerIsTryingToLeave()
     {
        var dialog = GetComponent<ConversationComponent>();
        if (dialog != null)
@@ -24,12 +24,12 @@ public class MessagingClientReceiver : MonoBehaviour
         }
     }
 
-    void OnDestroy()
-    {
-        if (MessagingManager.Instance != null)
-        {
-            MessagingManager.Instance.UnSubscribe(ThePlayerIsTryingToLeave);
-        }
-    }
-    
+    // void OnDestroy()
+    // {
+    //     if (MessagingManager.Instance != null)
+    //     {
+    //         MessagingManager.Instance.UnSubscribe(ThePlayerIsTryingToLeave);
+    //     }
+    // }
+
 }

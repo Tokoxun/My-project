@@ -1,28 +1,11 @@
 ﻿using UnityEngine;
 
-public class MessagingClientReceiverMayorAndShopkeep : MonoBehaviour
+public class MessagingClientReceiverShopkeep : MonoBehaviour
 {
     // void Start()
     // {
     //     MessagingManager.Instance.Subscribe(ThePlayerIsTryingToLeave);
     // }
-
-    public void ThePlayerIsTryingToLeave()
-    {
-       var dialog = GetComponent<ConversationComponent>();
-       if (dialog != null)
-       {
-           if (dialog.CustomConversationUtility != null && dialog.CustomConversationUtility.Length > 0)
-            {
-               var conversation = dialog.CustomConversationUtility[0];
-                if (conversation != null)
-                {
-                    Debug.Log("conversation");
-                    ConversationManager.Instance.StartConversation(conversation);
-                }
-            }
-        }
-    }
 
     public void ThePlayerIsTryingSomething()
     {
@@ -31,7 +14,7 @@ public class MessagingClientReceiverMayorAndShopkeep : MonoBehaviour
        {
            if (dialogS.CustomConversationUtility != null && dialogS.CustomConversationUtility.Length > 0)
             {
-               var conversationS = dialogS.CustomConversationUtility[1];
+               var conversationS = dialogS.CustomConversationUtility[0];
                 if (conversationS != null)
                 {
                     Debug.Log("conversation");

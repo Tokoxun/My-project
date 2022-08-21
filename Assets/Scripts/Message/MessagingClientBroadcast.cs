@@ -6,12 +6,12 @@ public class MessagingClientBroadcast : MonoBehaviour {
     {
         if (col.collider.tag == "ShopkeepConversation")
         {
-            var receiver = GetComponent<MessagingClientReceiverMayorAndShopkeep>();
+            var receiver = col.collider.GetComponent<MessagingClientReceiverShopkeep>();
             receiver.ThePlayerIsTryingSomething();
         }
         else if (col.collider.tag == "MayorConversation")
         {
-            var receiverM = GetComponent<MessagingClientReceiverMayorAndShopkeep>();
+            var receiverM = col.collider.GetComponent<MessagingClientReceiverMayor>();
             receiverM.ThePlayerIsTryingToLeave();
         }
     }
