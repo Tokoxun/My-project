@@ -847,6 +847,7 @@ GameObject:
   - component: {fileID: 845334739}
   - component: {fileID: 845334740}
   - component: {fileID: 845334742}
+  - component: {fileID: 845334744}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1037,6 +1038,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c17d61daab40b43adbc40512713041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &845334744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845334734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373df9cc9395cb74ba6532918b363f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &855495149
@@ -1414,13 +1427,11 @@ GameObject:
   - component: {fileID: 1287599365}
   - component: {fileID: 1287599364}
   - component: {fileID: 1287599369}
-  - component: {fileID: 1287599368}
-  - component: {fileID: 1287599367}
-  - component: {fileID: 1287599366}
-  - component: {fileID: 1287599370}
+  - component: {fileID: 1287599371}
+  - component: {fileID: 1287599372}
   m_Layer: 0
   m_Name: Mayor
-  m_TagString: Untagged
+  m_TagString: MayorConversation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1583,44 +1594,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.22, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &1287599366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287599358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29f4f1478cd2a745b7bed0724fd364f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1287599367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287599358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373df9cc9395cb74ba6532918b363f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1287599368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287599358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd90af28a50de1f4fb2d9d9e13bdf893, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CustomConversationUtility:
-  - {fileID: 11400000, guid: a20b2b91f3225c240b0e88e00107ba05, type: 2}
 --- !u!114 &1287599369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,7 +1611,7 @@ MonoBehaviour:
   Faction: 
   Occupation: 
   Level: 0
---- !u!114 &1287599370
+--- !u!114 &1287599371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1647,7 +1620,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287599358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f033d503833b9348b0ed9cb49e01992, type: 3}
+  m_Script: {fileID: 11500000, guid: bd90af28a50de1f4fb2d9d9e13bdf893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CustomConversationUtility:
+  - {fileID: 11400000, guid: a20b2b91f3225c240b0e88e00107ba05, type: 2}
+--- !u!114 &1287599372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287599358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e54c9de4015226448d659d0aac63f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1288931242
@@ -2724,54 +2711,15 @@ GameObject:
   - component: {fileID: 2137240498}
   - component: {fileID: 2137240497}
   - component: {fileID: 2137240496}
-  - component: {fileID: 2137240495}
-  - component: {fileID: 2137240494}
-  - component: {fileID: 2137240493}
+  - component: {fileID: 2137240502}
+  - component: {fileID: 2137240503}
   m_Layer: 0
   m_Name: Shopkeep_1
-  m_TagString: Untagged
+  m_TagString: ShopkeepConversation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2137240493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137240492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29f4f1478cd2a745b7bed0724fd364f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2137240494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137240492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373df9cc9395cb74ba6532918b363f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2137240495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137240492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd90af28a50de1f4fb2d9d9e13bdf893, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CustomConversationUtility:
-  - {fileID: 11400000, guid: 7239101623dc0bf409520bb6f84f38d5, type: 2}
 --- !u!61 &2137240496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2921,3 +2869,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2137240502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137240492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd90af28a50de1f4fb2d9d9e13bdf893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CustomConversationUtility:
+  - {fileID: 11400000, guid: 7239101623dc0bf409520bb6f84f38d5, type: 2}
+--- !u!114 &2137240503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137240492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e54c9de4015226448d659d0aac63f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

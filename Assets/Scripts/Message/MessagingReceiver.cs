@@ -1,13 +1,10 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class MessagingClientReceiverMayor : MonoBehaviour
+public class MessagingReceiver : MonoBehaviour
 {
-    // void Start()
-    // {
-    //     MessagingManager.Instance.Subscribe(ThePlayerIsTryingToLeave);
-    // }
-
-    public void ThePlayerIsTryingToLeave()
+    public void MessagePlayer()
     {
        var dialog = GetComponent<ConversationComponent>();
        if (dialog != null)
@@ -23,13 +20,4 @@ public class MessagingClientReceiverMayor : MonoBehaviour
             }
         }
     }
-
-    // void OnDestroy()
-    // {
-    //     if (MessagingManager.Instance != null)
-    //     {
-    //         MessagingManager.Instance.UnSubscribe(ThePlayerIsTryingToLeave);
-    //     }
-    // }
-
 }
