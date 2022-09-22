@@ -5,6 +5,10 @@ using UnityEngine;
 public class CharacterAttack : MonoBehaviour
 {
     // Start is called before the first frame update
+    private SpriteRenderer profSpriteImage;
+
+    private Animator profAnim;
+
     private GameObject attackArea = default;
 
     private bool attacking = false;
@@ -16,6 +20,8 @@ public class CharacterAttack : MonoBehaviour
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
+        profAnim = (Animator)GetComponent(typeof(Animator));
+        profSpriteImage =(SpriteRenderer)GetComponent(typeof(SpriteRenderer));
     }
 
     // Update is called once per frame
@@ -24,6 +30,16 @@ public class CharacterAttack : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             Attack();
+            profAnim.SetBool("yAttk", true);
+
+            if(profSpriteImage.flipX == false)
+            {
+                profAnim.SetBool("xAttk", true);
+            }
+            else if(profSpriteImage.flipX == true)
+            {
+                profAnim.SetBool("xAttk", true);
+            }
         }
 
         if(attacking)
@@ -35,6 +51,8 @@ public class CharacterAttack : MonoBehaviour
                 timer = 0;
                 attacking = false;
                 attackArea.SetActive(attacking);
+                profAnim.SetBool("yAttk", false);
+                profAnim.SetBool("xAttk", false);
             }
 
         }
