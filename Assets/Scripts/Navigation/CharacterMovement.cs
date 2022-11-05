@@ -21,13 +21,12 @@ private SpriteRenderer playerSpriteImage;
   }
 
   void Update (){
-        movePlayerHorizontal = Input.GetAxis("Horizontal"); 
-        movePlayerVertical = Input.GetAxis("Vertical"); 
-        movement 
-          = new Vector2(movePlayerHorizontal,movePlayerVertical); 
+      movePlayerHorizontal = Input.GetAxis("Horizontal"); 
+      movePlayerVertical = Input.GetAxis("Vertical"); 
+      movement = new Vector2(movePlayerHorizontal,movePlayerVertical); 
 
-        playerRigidBody2D.velocity=movement*speed;
-        if(movePlayerVertical!=0){ 
+      playerRigidBody2D.velocity=movement*speed;
+      if(movePlayerVertical!=0){ 
         playerAnim.SetBool("xMove",false); 
         playerSpriteImage.flipX=false; 
 

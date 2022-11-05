@@ -369,6 +369,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/AttackArea.cs"
 "Assets/Scripts/CharacterAttack.cs"
+"Assets/Scripts/CharacterJump.cs"
 "Assets/Scripts/Classes/Conversation.cs"
 "Assets/Scripts/Classes/ConversationComponent.cs"
 "Assets/Scripts/Classes/Entity.cs"
