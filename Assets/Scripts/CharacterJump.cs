@@ -21,8 +21,8 @@ public class CharacterJump : MonoBehaviour
     public float movePlayerHorizontal;
     public float xvelocity;
     public float xdistance = 0f;
-    // public float timeToDrop = 0.10f;
-    // private float droptimer = 0f;
+    public float timeToDrop = 0.10f;
+    private float droptimer = 0f;
 
 
     // Start is called before the first frame update
@@ -40,15 +40,24 @@ public class CharacterJump : MonoBehaviour
         xvelocity = xspeed * movePlayerHorizontal;
         if (isJump && timer >= timeToJump)
         {
-            // velocity = 20;
-            // transform.Translate(new Vector2(xdistance, -velocity) * Time.deltaTime);
-            // droptimer = 0;
-            jumpPos += new Vector2(xdistance, 0);
-            transform.position = jumpPos;
-            xdistance = 0f;
-            isJump = false;
-            timer = 0;
-            velocity = 0;
+            droptimer += Time.deltaTime;
+            if (droptimer < timeToDrop)
+            {
+                velocity = 20;
+                transform.Translate(new Vector2(xvelocity, -velocity) * Time.deltaTime);
+                xdistance += xvelocity;
+            }
+            else
+            {
+                jumpPos += new Vector2(xdistance, 0);
+                transform.position = jumpPos;
+                xdistance = 0f;
+                isJump = false;
+                timer = 0;
+                velocity = 0;
+                droptimer = 0;
+            }
+            
         }
         else if (isJump && timer < timeToJump)
         {
