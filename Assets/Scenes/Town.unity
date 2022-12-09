@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 255113681}
   - component: {fileID: 255113680}
   - component: {fileID: 255113682}
+  - component: {fileID: 255113683}
   m_Layer: 0
   m_Name: Professor
   m_TagString: Untagged
@@ -642,12 +643,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 255113672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9de6f0d6e8e4eff4ea6b5e58c44b0e1f, type: 3}
+  m_Script: {fileID: 11500000, guid: efb2f1e7a17f97a42aad7b53c35cfc8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  speed: 10
+  lungeDistance: 5
+  lungeDuration: 0.5
+--- !u!114 &255113683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255113672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6c05fb18542314ea5137372290cb8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 20
   gravity: -9.81
-  gravityScale: 1
+  gravityScale: 5
+  xspeed: 0.1
+  movePlayerHorizontal: 0
+  xvelocity: 0
+  xdistance: 0
+  timeToDrop: 0.1
 --- !u!1 &262334713
 GameObject:
   m_ObjectHideFlags: 0
