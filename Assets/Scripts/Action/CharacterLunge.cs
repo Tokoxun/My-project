@@ -8,14 +8,11 @@ public class CharacterLunge : MonoBehaviour
     private Animator profAnim;
     private float movePlayerHorizontal; 
 
-    // The speed at which the character moves
-    public float speed = 10.0f;
-
     // The distance the character moves position during the lunge
     public float lungeDistance = 2.0f;
 
     // The amount of time the lunge lasts
-    public float lungeDuration = 0.5f;
+    public float lungeDuration = 0.10f;
 
     // Variables to track the lunge state
     private bool isLunging = false;
@@ -43,8 +40,6 @@ public class CharacterLunge : MonoBehaviour
         else if (isLunging && lungeTimer < lungeDuration)
         {
             lungeTimer += Time.deltaTime;
-            profAnim.SetBool("Readying", false);
-            profAnim.SetBool("Lunging", true);
             if (movePlayerHorizontal>0)
             {
                 transform.Translate(new Vector2(lungeDistance, 0) * Time.deltaTime);
@@ -63,6 +58,8 @@ public class CharacterLunge : MonoBehaviour
                 isLunging = true;
                 lungeTimer += Time.deltaTime;
                 profAnim.SetBool("Readying", true);
+                profAnim.SetBool("Readying", false);
+                profAnim.SetBool("Lunging", true);
             }
         }
     }
