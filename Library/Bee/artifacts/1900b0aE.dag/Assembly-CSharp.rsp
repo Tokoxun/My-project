@@ -379,6 +379,7 @@
 "Assets/Scripts/Classes/Player.cs"
 "Assets/Scripts/Classes/Singleton.cs"
 "Assets/Scripts/ConversationManager.cs"
+"Assets/Scripts/DetectionZone.cs"
 "Assets/Scripts/EnemySpawnManager.cs"
 "Assets/Scripts/Health.cs"
 "Assets/Scripts/Message/ConversationEntry.cs"
