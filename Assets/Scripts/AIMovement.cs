@@ -21,7 +21,7 @@ public class AIMovement : MonoBehaviour
   private bool movingRight = false;
   private float moveTime = 0f;
   private float movingTime = 0.50f;
-  private float timeFraction = 2f;
+  // private float timeFraction = 2f;
   //Sprite renderer for the player 
   private SpriteRenderer AISpriteImage;
 
