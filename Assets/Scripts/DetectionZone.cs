@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class DetectionZone : MonoBehaviour
 {
-<<<<<<< HEAD
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        Debug.Log("Alerted");
-=======
     private bool Awareness = false;
 
 
@@ -16,6 +11,5 @@ public class DetectionZone : MonoBehaviour
     {
         Awareness = true;
         Debug.Log(Awareness);
->>>>>>> experiment2
     }
 }
