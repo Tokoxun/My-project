@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class DetectionZone : MonoBehaviour
 {
-    private bool Awareness = false;
+    private bool playerNotDetected = true;
+
+    private GameObject detection = default;
 
 
+    void Start()
+    {
+        detection = transform.GetChild(1).gameObject;
+        detection.SetActive(playerNotDetected);
+    }
+
+    
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Awareness = true;
-        Debug.Log(Awareness);
+        playerNotDetected = false;
+        detection.SetActive(playerNotDetected);
     }
 }

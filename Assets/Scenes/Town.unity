@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3a89b724a6b7498a4d2ef13b23f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAttack: 0
 --- !u!61 &75642663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1378,6 +1379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373822397}
   - component: {fileID: 373822398}
+  - component: {fileID: 373822399}
   m_Layer: 0
   m_Name: EnemyAtkRange
   m_TagString: Untagged
@@ -1425,11 +1427,23 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.08769512, y: 0.38613403}
-      - {x: -0.16179997, y: 0.2651694}
-      - {x: -0.66086453, y: -0.7505535}
-      - {x: 0.7777916, y: -0.7213216}
-      - {x: 0.32257462, y: 0.29440135}
+    - - {x: 0.08769512, y: 0.13748777}
+      - {x: -0.08529335, y: 0.09302965}
+      - {x: -0.6799912, y: -0.9992}
+      - {x: 0.49089253, y: -0.9890945}
+      - {x: 0.09305453, y: 0.026628315}
+--- !u!114 &373822399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373822396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eac5307a079bbb4faea59c6a86e05d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &380142694
 GameObject:
   m_ObjectHideFlags: 0
