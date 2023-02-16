@@ -9,7 +9,6 @@ public class EnemyAttack : MonoBehaviour
 
     private float attackTimer = 0.25f;
     private float timer = 0f;
-    public bool enemyAttack = false;
 
 
     // Start is called before the first frame update
