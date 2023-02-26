@@ -11,9 +11,11 @@ public class Patrol : MonoBehaviour{
     // Animator component for the player 
     private Animator playerAnim;
 
+    private Vector2[] patrolPoints;
+
     // Compute the translation vector for the next frame
     private int indexer() {
-        return (int)(Time.timeSinceLevelLoad/sideDuration) % 3;
+        return (int)(Time.timeSinceLevelLoad/sideDuration) % 4;
     }
 
     void Awake() {
@@ -25,13 +27,16 @@ public class Patrol : MonoBehaviour{
     void Update() {
         int idx = indexer();
         if (idx == 0) {
-            transform.Translate(-1 * Time.deltaTime, -1 * Time.deltaTime, 0.0f);
+            transform.Translate(0.0f, -1 * Time.deltaTime, 0.0f);
         }
         else if (idx == 1) {
-            transform.Translate(2 * Time.deltaTime, 0.0f, 0.0f);
+            transform.Translate(Time.deltaTime, 0.0f, 0.0f);
         }
         else if (idx == 2) {
-            transform.Translate(-1 * Time.deltaTime, Time.deltaTime, 0.0f);
+            transform.Translate(0.0f, Time.deltaTime, 0.0f);
+        }
+        else {
+            transform.Translate(-1 * Time.deltaTime, 0.0f, 0.0f);
         }
     }
 }
