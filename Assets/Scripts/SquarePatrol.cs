@@ -27,15 +27,29 @@ public class Patrol : MonoBehaviour{
         int idx = indexer();
         if (idx == 0) {
             transform.Translate(0.0f, -1 * Time.deltaTime, 0.0f);
+            playerAnim.SetBool("walkDown", true);
+            playerAnim.SetBool("walkUp", false);
+            playerAnim.SetBool("walkHorizontal", false);
         }
         else if (idx == 1) {
             transform.Translate(Time.deltaTime, 0.0f, 0.0f);
+            playerAnim.SetBool("walkDown", false);
+            playerAnim.SetBool("walkUp", false);
+            playerAnim.SetBool("walkHorizontal", true);
+            playerSpriteImage.flipX=true; 
         }
         else if (idx == 2) {
             transform.Translate(0.0f, Time.deltaTime, 0.0f);
+            playerAnim.SetBool("walkDown", false);
+            playerAnim.SetBool("walkUp", true);
+            playerAnim.SetBool("walkHorizontal", false);
         }
         else {
             transform.Translate(-1 * Time.deltaTime, 0.0f, 0.0f);
+            playerAnim.SetBool("walkDown", false);
+            playerAnim.SetBool("walkUp", false);
+            playerAnim.SetBool("walkHorizontal", true);
+            playerSpriteImage.flipX=false; 
         }
     }
 }
