@@ -11,7 +11,6 @@ public class Patrol : MonoBehaviour{
     // Animator component for the player 
     private Animator playerAnim;
 
-    private Vector2[] patrolPoints;
 
     // Compute the translation vector for the next frame
     private int indexer() {
