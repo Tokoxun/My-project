@@ -287,15 +287,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.53}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!95 &75642664
 Animator:
   serializedVersion: 4
+=======
+--- !u!114 &75642664
+MonoBehaviour:
+>>>>>>> triangle_patrol
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75642656}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2932d44acae12924a8ffd0d049ff47b5, type: 2}
   m_CullingMode: 0
@@ -307,6 +313,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e03133674c72d54991cc8209c2e6f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> triangle_patrol
 --- !u!1 &174901973
 GameObject:
   m_ObjectHideFlags: 0
