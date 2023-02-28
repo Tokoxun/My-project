@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patrol : MonoBehaviour{
+public class SquarePatrol : MonoBehaviour{
     static public float sideDuration = 3.0f; 
 
     private Rigidbody2D playerRigidBody2D; 
