@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 75642661}
   - component: {fileID: 75642660}
   - component: {fileID: 75642659}
-  - component: {fileID: 75642658}
   - component: {fileID: 75642657}
   - component: {fileID: 75642662}
   - component: {fileID: 75642663}
@@ -158,26 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe5616dc7fb327468f62e5479ef4735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &75642658
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75642656}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2932d44acae12924a8ffd0d049ff47b5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  AIspeed: 2
+  professor: {fileID: 255113675}
 --- !u!50 &75642659
 Rigidbody2D:
   serializedVersion: 4
@@ -280,7 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3a89b724a6b7498a4d2ef13b23f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttack: 0
 --- !u!61 &75642663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -307,18 +287,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.53}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!114 &75642664
 MonoBehaviour:
+=======
+--- !u!95 &75642664
+Animator:
+  serializedVersion: 4
+>>>>>>> checkup
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75642656}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e03133674c72d54991cc8209c2e6f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2932d44acae12924a8ffd0d049ff47b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+>>>>>>> checkup
 --- !u!1 &174901973
 GameObject:
   m_ObjectHideFlags: 0
