@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1366
     height: 685
   m_ShowMode: 4
+<<<<<<< HEAD
+  m_Title: Game
+=======
   m_Title: Scene
+>>>>>>> checkup
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +122,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
+<<<<<<< HEAD
+  controlID: 106
+=======
   controlID: 126
+>>>>>>> checkup
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +151,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 107
+=======
   controlID: 127
+>>>>>>> checkup
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +180,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
+  controlID: 68
+=======
   controlID: 67
+>>>>>>> checkup
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +209,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 69
+=======
   controlID: 68
+>>>>>>> checkup
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +269,11 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 13}
   m_Selected: 0
+<<<<<<< HEAD
+  m_LastSelected: 1
+=======
   m_LastSelected: 4
+>>>>>>> checkup
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +293,13 @@ MonoBehaviour:
     y: 424
     width: 1000
     height: 211
+<<<<<<< HEAD
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+=======
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> checkup
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 19}
@@ -414,7 +443,11 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
+<<<<<<< HEAD
+  m_LastSelectedObjectID: 32612
+=======
   m_LastSelectedObjectID: 37830
+>>>>>>> checkup
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -573,9 +606,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: 647f0000
+      m_LastClickedID: 32612
+      m_ExpandedIDs: f0f3ffff2efbffff6a5e0000
+=======
       m_SelectedIDs: c6930000
       m_LastClickedID: 37830
       m_ExpandedIDs: 0ec3ffff4cc4ffffc6930000
+>>>>>>> checkup
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -967,22 +1006,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
+    - Assets/Scripts
+=======
     - Assets/Animations/Goblin animation
+>>>>>>> checkup
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 55
   m_LastFolders:
+<<<<<<< HEAD
+  - Assets/Scripts
+=======
   - Assets/Animations/Goblin animation
+>>>>>>> checkup
   m_LastFoldersGridSize: 55
   m_LastProjectPath: D:\Unity\Projects\Tokoxun-project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 203}
+    m_SelectedIDs: 58620000
+    m_LastClickedID: 25176
+    m_ExpandedIDs: 00000000346200004862000000ca9a3bffffff7f
+=======
     scrollPos: {x: 0, y: 240}
     m_SelectedIDs: e4a50000
     m_LastClickedID: 42468
     m_ExpandedIDs: 0000000070930000729300008293000000ca9a3bffffff7f
+>>>>>>> checkup
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1010,7 +1064,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
+    m_ExpandedIDs: 0000000034620000
+=======
     m_ExpandedIDs: 
+>>>>>>> checkup
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1035,9 +1093,15 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
+    m_SelectedInstanceIDs: 647f0000
+    m_LastClickedInstanceID: 32612
+    m_HadKeyboardFocusLastEvent: 1
+=======
     m_SelectedInstanceIDs: c6930000
     m_LastClickedInstanceID: 37830
     m_HadKeyboardFocusLastEvent: 0
+>>>>>>> checkup
     m_ExpandedInstanceIDs: c62300003e5f0000185f0000a45e000044690000fc6e00002860000042600000f0600000f2600000ee600000466f0000805f0000845f000068600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1062,7 +1126,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 46}
     m_GridSize: 55
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 149
