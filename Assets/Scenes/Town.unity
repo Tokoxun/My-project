@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIspeed: 2
-  professor: {fileID: 0}
+  professor: {fileID: 255113675}
 --- !u!95 &75642658
 Animator:
   serializedVersion: 4
