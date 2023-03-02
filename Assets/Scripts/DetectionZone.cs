@@ -19,15 +19,17 @@ public class DetectionZone : MonoBehaviour
     void Start()
     {
         detection = transform.GetChild(1).gameObject;
-        detection.SetActive(playerNotDetected);
         AIAnim=(Animator)GetComponent(typeof(Animator));
         AISpriteImage =(SpriteRenderer)GetComponent(typeof(SpriteRenderer));
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        playerNotDetected = false;
-        detection.SetActive(playerNotDetected);
+        if (collider.gameObject.tag == "Ally")
+        {
+            playerNotDetected = false;
+            detection.SetActive(playerNotDetected);
+        }
     }
 
     void Update()
