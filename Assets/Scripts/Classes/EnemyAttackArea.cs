@@ -13,8 +13,16 @@ public class EnemyAttackArea : MonoBehaviour
         {
             Health health = collider.GetComponent<Health>();
             var check = GetComponentInParent<EnemyAttack>();
+            var check2 = GetComponentInParent<EnemyAttack2>();
             health.Damage(damage);
-            check.EnemyAction();
+            if (check != null)
+            {
+                check.EnemyAction();
+            }
+            else
+            {
+                check2.EnemyAction();
+            }
         }
     }
 }
