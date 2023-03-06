@@ -12,8 +12,6 @@ public class DetectionZone2 : MonoBehaviour
     private bool playerNotDetected = true;
     private GameObject detection = default;
     public Transform professor;
-    private Vector2 previouslocation;
-    private float distlocation;
 
 
     void Start()
@@ -29,32 +27,30 @@ public class DetectionZone2 : MonoBehaviour
     {
         playerNotDetected = false;
         detection.SetActive(playerNotDetected);
-        previouslocation = transform.position;
     }
 
     void Update()
     {
         ProfAndAIDistx = professor.transform.position.x - transform.position.x;
-        ProfAndAIDisty = professor.transform.position.y - transform.position.y;
-        distlocation = transform.position.x - previouslocation.x; 
+        ProfAndAIDisty = professor.transform.position.y - transform.position.y; 
         if(playerNotDetected == false)
         {
             transform.Translate(new Vector2(ProfAndAIDistx * AIspeed, ProfAndAIDisty * AIspeed) * Time.deltaTime);
-            if(previouslocation.x != transform.position.x)
+            if(ProfAndAIDistx != 0)
             {
                 AIAnim.SetBool("walkHorizontal", true);  
 
-                if(distlocation > 0)
+                if(ProfAndAIDistx > 0)
                 {
                     AISpriteImage.flipX = false;
                 }
-                else if(distlocation < 0)
+                else if(ProfAndAIDistx < 0)
                 {
                     AISpriteImage.flipX = true;
                 }
             }
 
-            else if (distlocation == 0)
+            else if (ProfAndAIDistx == 0)
             {
                 AIAnim.SetBool("walkHorizontal", false);
             }
