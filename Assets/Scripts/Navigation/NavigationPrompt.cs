@@ -6,9 +6,10 @@ public class NavigationPrompt : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.CompareTag("Borders"))
+        if(MapRotater.CanNavigate(this.tag))
         {
-            Debug.Log("Leave Town");
+            Debug.Log("attempting to exit" + tag);
+            MapRotater.NavigateTo(this.tag);
         }
     }
 }
