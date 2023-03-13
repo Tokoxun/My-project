@@ -10,7 +10,7 @@ public class RangeDetectionZone : MonoBehaviour
     private float ProfAndAIDistx;
     private float ProfAndAIDisty;
     private bool playerNotDetected = true;
-    private GameObject detection = default;
+    private GameObject detection;
     private bool attacks = false;
     private GameObject range;
     public Transform professor;

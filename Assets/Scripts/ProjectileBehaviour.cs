@@ -7,11 +7,14 @@ public class ProjectileBehaviour : MonoBehaviour
     private float speed = 2f;
     private void Update()
     {
-        transform.position += transform.right * Time.deltaTime * speed;
+        transform.position += -transform.right * Time.deltaTime * speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collider)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        Destroy(gameObject);
+        if (col.collider.tag == "Ally")
+        {
+            Destroy(gameObject);
+        }
     }
 }
