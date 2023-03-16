@@ -6,7 +6,6 @@ public class RangeDetectionZone : MonoBehaviour
 {
     private Animator AIAnim;
     private SpriteRenderer AISpriteImage;
-    public float AIspeed = 2f;
     private float ProfAndAIDist;
     private float ProfAndAIDisty;
     private bool playerNotDetected = true;
@@ -16,7 +15,7 @@ public class RangeDetectionZone : MonoBehaviour
     public Transform professor;
     private float timeToAvoid;
     private float AvoidCooldown = 3f;
-    private float AvoidDist = 6.5f;
+    private float AvoidDist = 6f;
 
     void Start()
     {
@@ -42,7 +41,7 @@ public class RangeDetectionZone : MonoBehaviour
         int profposy = Mathf.RoundToInt(professor.transform.position.y);
         int AIposy = Mathf.RoundToInt(transform.position.y);
         ProfAndAIDist = Vector2.Distance(professor.transform.position, transform.position);
-        ProfAndAIDisty = transform.position.y - professor.transform.position.y;
+        ProfAndAIDisty = professor.transform.position.y - transform.position.y;
         if(playerNotDetected == false)
         {
             timeToAvoid += Time.deltaTime;
@@ -58,12 +57,12 @@ public class RangeDetectionZone : MonoBehaviour
                     transform.Translate(new Vector2(transform.position.x + AvoidDist, 0) * Time.deltaTime);
                 }
             }
-
             if(ProfAndAIDist > 5 && timeToAvoid >= AvoidCooldown)
             {
                 timeToAvoid = 0;
             }
-            // transform.Translate(new Vector2(ProfAndAIDistx * AIspeed, ProfAndAIDisty * AIspeed) * Time.deltaTime);
+
+            transform.Translate(new Vector2(0, ProfAndAIDisty) * Time.deltaTime);
         }
     }
 }

@@ -6,12 +6,22 @@ public class BowShot : MonoBehaviour
 {
     public ProjectileBehaviour ProjectilePrefab;
     public Transform Bow;
+    private float readyingShot;
+    private float ShotCooldown = 2f;
+    private bool hadFired = false;
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        if(col.GetComponent<Collider2D>().tag == "Ally")
+        readyingShot += Time.deltaTime;
+        if(col.CompareTag("Ally") && readyingShot >= ShotCooldown)
         {
             Instantiate(ProjectilePrefab, Bow.position, transform.rotation);
+            hadFired = true;
+        }
+        if(hadFired == true && readyingShot >= ShotCooldown)
+        {
+            readyingShot = 0;
         }
     }
 }
+

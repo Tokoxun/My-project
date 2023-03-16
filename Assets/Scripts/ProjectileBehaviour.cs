@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
-    private float speed = 2f;
+    private float speed = 5f;
     private void Update()
     {
         transform.position += -transform.right * Time.deltaTime * speed;
