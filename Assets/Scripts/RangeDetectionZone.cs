@@ -50,16 +50,31 @@ public class RangeDetectionZone : MonoBehaviour
                 if(professor.transform.position.x > transform.position.x)
                 {
                     transform.Translate(new Vector2(transform.position.x - AvoidDist, 0) * Time.deltaTime);
+                    AISpriteImage.flipX = true;
+                    AIAnim.SetBool("walking", true);
                 }
 
-                if(professor.transform.position.x < transform.position.x)
+                else if(professor.transform.position.x < transform.position.x)
                 {
                     transform.Translate(new Vector2(transform.position.x + AvoidDist, 0) * Time.deltaTime);
+                    AISpriteImage.flipX = false;
+                    AIAnim.SetBool("walking", true);
                 }
             }
             if(ProfAndAIDist > 5 && timeToAvoid >= AvoidCooldown)
             {
-                timeToAvoid = 0;
+                if(professor.transform.position.x > transform.position.x)
+                {
+                    AISpriteImage.flipX = false;
+                    AIAnim.SetBool("walking", false);
+                    timeToAvoid = 0;
+                }
+                else if(professor.transform.position.x < transform.position.x)
+                {
+                    AISpriteImage.flipX = true;
+                    AIAnim.SetBool("walking", false);
+                    timeToAvoid = 0;
+                }
             }
 
             transform.Translate(new Vector2(0, ProfAndAIDisty) * Time.deltaTime);

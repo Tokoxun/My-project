@@ -12,11 +12,14 @@ public class BowShot : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
+        var AIAnim = GetComponentInParent<Animator>();
         readyingShot += Time.deltaTime;
+        AIAnim.SetBool("attacking", true);
         if(col.CompareTag("Ally") && readyingShot >= ShotCooldown)
         {
             Instantiate(ProjectilePrefab, Bow.position, transform.rotation);
             hadFired = true;
+            AIAnim.SetBool("attacking", false);
         }
         if(hadFired == true && readyingShot >= ShotCooldown)
         {
