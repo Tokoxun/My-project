@@ -25,8 +25,11 @@ public class DetectionZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        playerNotDetected = false;
-        detection.SetActive(playerNotDetected);
+        if (collider.gameObject.tag == "Ally")
+        {
+            playerNotDetected = false;
+            detection.SetActive(playerNotDetected);
+        }
     }
 
     void Update()

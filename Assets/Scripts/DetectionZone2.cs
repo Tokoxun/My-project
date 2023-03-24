@@ -26,10 +26,12 @@ public class DetectionZone2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        playerNotDetected = false;
-        detection.SetActive(playerNotDetected);
+        if (collider.gameObject.tag == "Ally")
+        {
+            playerNotDetected = false;
+            detection.SetActive(playerNotDetected);
+        }
     }
-
     void Update()
     {
         ProfAndAIDistx = professor.transform.position.x - transform.position.x;

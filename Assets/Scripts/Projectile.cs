@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileBehaviour : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     private float speed = 5f;
     private float timeBeforeDespawn;

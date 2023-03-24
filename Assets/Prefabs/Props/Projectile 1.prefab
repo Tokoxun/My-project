@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2449199271308682930}
-  - component: {fileID: 8920671308973594499}
   - component: {fileID: 5588807259093473571}
   - component: {fileID: 5492638397519466127}
+  - component: {fileID: 7506491294578112940}
   m_Layer: 0
   m_Name: Projectile 1
   m_TagString: Untagged
@@ -35,18 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8920671308973594499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2586523131655579793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae95d93e67e3394fb410a5b850c4dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5588807259093473571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94,6 +82,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &7506491294578112940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586523131655579793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351e020c76b4084d9056615dbef7bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8226049104159521973
 GameObject:
   m_ObjectHideFlags: 0

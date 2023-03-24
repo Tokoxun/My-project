@@ -30,10 +30,13 @@ public class RangeDetectionZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        playerNotDetected = false;
-        detection.SetActive(playerNotDetected);
-        attacks = true;
-        range.SetActive(attacks);
+        if (collider.gameObject.tag == "Ally")
+        {
+            playerNotDetected = false;
+            detection.SetActive(playerNotDetected);
+            attacks = true;
+            range.SetActive(attacks);
+        }
     }
 
     void Update()

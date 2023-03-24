@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BowShot : MonoBehaviour
 {
-    public ProjectileBehaviour ProjectilePrefab;
+    public Projectile ProjectilePrefab;
     public Transform Bow;
     private float readyingShot;
     private float ShotCooldown = 2f;
