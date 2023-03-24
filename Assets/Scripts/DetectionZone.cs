@@ -12,6 +12,7 @@ public class DetectionZone : MonoBehaviour
     private bool playerNotDetected = true;
     private GameObject detection = default;
     public Transform professor;
+    public Transform colliderRotate;
 
 
     void Start()
@@ -46,11 +47,13 @@ public class DetectionZone : MonoBehaviour
                 {
                     AIAnim.SetBool("walkUp", true);
                     AIAnim.SetBool("walkDown", false);
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
                 }
                 else if(ProfAndAIDisty < 0)
                 {
                     AIAnim.SetBool("walkDown", true);
                     AIAnim.SetBool("walkUp", false);
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
 
@@ -63,10 +66,12 @@ public class DetectionZone : MonoBehaviour
                 {
                     AIAnim.SetBool("walkHorizontal", true);
                     AISpriteImage.flipX = true;
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
                 }
                 else if (ProfAndAIDistx < 0)
                 {
                     AIAnim.SetBool("walkHorizontal", true);
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                     AISpriteImage.flipX = false;
                 }
                 else

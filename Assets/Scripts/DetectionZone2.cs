@@ -12,6 +12,7 @@ public class DetectionZone2 : MonoBehaviour
     private bool playerNotDetected = true;
     private GameObject detection = default;
     public Transform professor;
+    public Transform colliderRotate;
 
 
     void Start()
@@ -42,10 +43,12 @@ public class DetectionZone2 : MonoBehaviour
 
                 if(ProfAndAIDistx > 0)
                 {
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
                     AISpriteImage.flipX = false;
                 }
                 else if(ProfAndAIDistx < 0)
                 {
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                     AISpriteImage.flipX = true;
                 }
             }
