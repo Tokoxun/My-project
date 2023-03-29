@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// public static class MapRotater
-// {
+public class MapRotater : MonoBehaviour
+{
 //     public static Dictionary<string, string> RouteInformation = new Dictionary<string, string>()
 //     {
 //         {"Overworld", "The big bad world", CanTravel = true}, {"Construction", "The construction area", CanTravel = false};
@@ -30,4 +30,28 @@ using UnityEngine;
 //         public string RouteDescription;
 //         public bool CanTravel;
 //     }
-// }
+
+
+    private float EnemyCount;
+    private float enemyDead;
+
+    void Start()
+    {
+        EnemyCount = 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.GetComponent<Collider2D>().CompareTag("enemy"))
+        {
+            EnemyCount += 1;
+            enemyDead = 0;
+        }
+    }
+
+    public void EnemyKilled()
+    {
+        enemyDead += 1;
+        Debug.Log(enemyDead);
+    }
+}

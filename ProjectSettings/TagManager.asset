@@ -8,6 +8,7 @@ TagManager:
   - ShopkeepConversation
   - MayorConversation
   - Ally
+  - enemy
   layers:
   - Default
   - TransparentFX
