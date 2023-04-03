@@ -9,11 +9,10 @@ public class DetectionZone : MonoBehaviour
     public float AIspeed = 2f;
     private float ProfAndAIDistx;
     private float ProfAndAIDisty;
-    private float moveAIHorizontal;
-    private float moveAIVertical;
     private bool playerNotDetected = true;
     private GameObject detection = default;
     public Transform professor;
+    public Transform colliderRotate;
 
 
     void Start()
@@ -26,51 +25,61 @@ public class DetectionZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        playerNotDetected = false;
-        detection.SetActive(playerNotDetected);
+        if (collider.gameObject.tag == "Ally")
+        {
+            playerNotDetected = false;
+            detection.SetActive(playerNotDetected);
+        }
     }
 
     void Update()
     {
+        int profposy = Mathf.RoundToInt(professor.transform.position.y);
+        int AIposy = Mathf.RoundToInt(transform.position.y);
         ProfAndAIDistx = professor.transform.position.x - transform.position.x;
         ProfAndAIDisty = professor.transform.position.y - transform.position.y;
-        moveAIHorizontal = Input.GetAxis("Horizontal"); 
-        moveAIVertical = Input.GetAxis("Vertical"); 
         if(playerNotDetected == false)
         {
             transform.Translate(new Vector2(ProfAndAIDistx * AIspeed, ProfAndAIDisty * AIspeed) * Time.deltaTime);
-            if(moveAIVertical != 0)
+            if(AIposy != profposy)
             {
-                AIAnim.SetBool("enemyMovex", false);
+                AIAnim.SetBool("walkHorizontal", false);
                 AISpriteImage.flipX = false;
             
-                if(moveAIVertical > 0)
+                if(ProfAndAIDisty > 0)
                 {
-                    AIAnim.SetInteger("enemyMovey",1);
+                    AIAnim.SetBool("walkUp", true);
+                    AIAnim.SetBool("walkDown", false);
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
                 }
-                else if(moveAIVertical < 0)
+                else if(ProfAndAIDisty < 0)
                 {
-                    AIAnim.SetInteger("enemyMovey",-1);
+                    AIAnim.SetBool("walkDown", true);
+                    AIAnim.SetBool("walkUp", false);
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
 
             else
             {
-                AIAnim.SetInteger("enemyMovey",0);
+                AIAnim.SetBool("walkUp", false);
+                AIAnim.SetBool("walkDown", false);
 
-                if(moveAIHorizontal > 0)
+                if(ProfAndAIDistx > 0)
                 {
-                    AIAnim.SetBool("enemyMovex", true);
+                    AIAnim.SetBool("walkHorizontal", true);
                     AISpriteImage.flipX = true;
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
                 }
-                else if (moveAIHorizontal < 0)
+                else if (ProfAndAIDistx < 0)
                 {
-                    AIAnim.SetBool("enemyMovex", true);
+                    AIAnim.SetBool("walkHorizontal", true);
+                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                     AISpriteImage.flipX = false;
                 }
                 else
                 {
-                    AIAnim.SetBool("enemyMovex", false);
+                    AIAnim.SetBool("walkHorizontal", false);
                 }
             }
         }

@@ -11,7 +11,8 @@ public class CharacterMovement : MonoBehaviour{
   private float movePlayerVertical; 
   private Vector2 movement; 
   //Sprite renderer for the player 
-private SpriteRenderer playerSpriteImage;
+  private SpriteRenderer playerSpriteImage;
+  public Transform colliderRotate;
 
   public float speed = 4.0f; 
   void Awake(){
@@ -31,10 +32,12 @@ private SpriteRenderer playerSpriteImage;
         playerSpriteImage.flipX=false; 
 
         if(movePlayerVertical>0){ 
-        playerAnim.SetInteger("yMove",1); 
+        playerAnim.SetInteger("yMove",1);
+        colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180); 
         }
         else if(movePlayerVertical<0){ 
-        playerAnim.SetInteger("yMove",-1); 
+        playerAnim.SetInteger("yMove",-1);
+        colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0); 
         }
 
         }
@@ -45,11 +48,13 @@ private SpriteRenderer playerSpriteImage;
         if(movePlayerHorizontal>0){ 
         playerAnim.SetBool("xMove",true); 
         playerSpriteImage.flipX=false; 
+        colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
 
       else if(movePlayerHorizontal<0){ 
         playerAnim.SetBool("xMove",true); 
         playerSpriteImage.flipX=true; 
+        colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
         }
       else{ 
         playerAnim.SetBool("xMove",false); 

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyAttack2 : MonoBehaviour
 {
     private Animator AIAnim;
     private SpriteRenderer AISpriteImage;
 
-    private float attackTimer = 0.25f;
+    private float attackTimer = 2f;
     private float timer = 0f;
 
 
@@ -22,24 +22,22 @@ public class EnemyAttack : MonoBehaviour
     {
             Debug.Log("attacked");
             timer += Time.deltaTime;
-            AIAnim.SetBool("enemyAtky", true);
+            AIAnim.SetBool("attacking", true);
 
             if(AISpriteImage.flipX == false)
             {
-                AIAnim.SetBool("enemyAtkx", true);
+                AIAnim.SetBool("attacking", true);
             }
             else if(AISpriteImage.flipX == true)
             {
-                AIAnim.SetBool("enemyAtkx", true);
+                AIAnim.SetBool("attacking", true);
             }
 
             if(timer >= attackTimer)
             {
                 timer = 0;
-                AIAnim.SetBool("enemyAtky", false);
-                AIAnim.SetBool("enemyAtkx", false);
+                AIAnim.SetBool("attacking", false);
             }
         
     }
-
 }
