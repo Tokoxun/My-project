@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class MapRotater : MonoBehaviour
 {
     public CanvasGroup dialogBox;
+    public Text TotalEnemy;
+    public Text EnemyLeft;
     private string sceneName;
     public string[] scenes;
     private float EnemyCount;
@@ -43,6 +45,8 @@ public class MapRotater : MonoBehaviour
 
     void Update()
     {
+        EnemyLeft.text = enemyDied.ToString();
+        TotalEnemy.text = EnemyCount.ToString();
         if(cleared)
         {
             mapTransistion += Time.deltaTime;
