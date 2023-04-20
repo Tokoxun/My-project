@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 {
     public Slider HealthBar;
     public Text HealthAndMaxHealth;
-    [SerializeField] int health = 100;
+    [SerializeField] float health = 100;
 
     private int MAX_HEALTH = 100;
 
@@ -35,7 +35,6 @@ public class Health : MonoBehaviour
         }
 
         this.health -= amount;
-        HealthBar.value = health;
         Debug.Log(this.health);
 
         if(this.health <= 0)
