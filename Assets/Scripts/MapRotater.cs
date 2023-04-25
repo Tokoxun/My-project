@@ -13,9 +13,7 @@ public class MapRotater : MonoBehaviour
     public string[] scenes;
     private float EnemyCount;
     private float enemyDied;
-    private float transistionTime = 0.5f;
-    private float mapTransistion;
-    private bool cleared = false;
+    public Animator FadeInOut;
 
     void Start()
     {
@@ -37,9 +35,7 @@ public class MapRotater : MonoBehaviour
         Debug.Log(enemyDied);
         if(enemyDied == EnemyCount)
         {
-            dialogBox.alpha = 1;
-            dialogBox.blocksRaycasts = true;
-            cleared = true;
+            StartCoroutine(LoadNextScene());
         }
     }
 
@@ -47,19 +43,18 @@ public class MapRotater : MonoBehaviour
     {
         EnemyLeft.text = enemyDied.ToString();
         TotalEnemy.text = EnemyCount.ToString();
-        if(cleared)
-        {
-            mapTransistion += Time.deltaTime;
-            if(mapTransistion >= transistionTime)
-            {
-                dialogBox.alpha = 0;
-                dialogBox.blocksRaycasts = false;
-                sceneName = scenes[Random.Range(0, scenes.Length)];
-                SceneManager.LoadScene(sceneName);
-                mapTransistion = 0;
-                enemyDied = 0;
-                cleared = false;
-            }
-        }
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        dialogBox.alpha = 1;
+        dialogBox.blocksRaycasts = true;
+        FadeInOut.SetBool("Start", true);
+        yield return new WaitForSeconds(2f);
+        sceneName = scenes[Random.Range(0, scenes.Length)];
+        SceneManager.LoadScene(sceneName);
+        dialogBox.alpha = 0;
+        dialogBox.blocksRaycasts = false;
+        enemyDied = 0;
     }
 }
