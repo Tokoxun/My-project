@@ -27,7 +27,6 @@ public class NormalEnemySpawn : MonoBehaviour
         {
             Instantiate(enemies[EnemyIndex], transform.position, transform.rotation);
             EnemyIndex += 1;
-        }
-        
+        } 
     }
 }
