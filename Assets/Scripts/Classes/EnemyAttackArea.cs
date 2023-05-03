@@ -19,7 +19,7 @@ public class EnemyAttackArea : MonoBehaviour
             {
                 check.EnemyAction();
             }
-            else
+            else if(check2 != null)
             {
                 check2.EnemyAction();
             }

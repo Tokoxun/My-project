@@ -14,5 +14,10 @@ public class AttackArea : MonoBehaviour
             GoblinHealth health = collider.GetComponent<GoblinHealth>();
             health.Damage(damage);
         }
+        if(collider.GetComponent<EnemyTankHealth>() != null)
+        {
+            EnemyTankHealth health = collider.GetComponent<EnemyTankHealth>();
+            health.Damage(damage);
+        }
     }
 }
