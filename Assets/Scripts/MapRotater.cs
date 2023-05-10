@@ -6,34 +6,35 @@ using UnityEngine.UI;
 
 public class MapRotater : MonoBehaviour
 {
+    private string sceneName;
     public CanvasGroup dialogBox;
     public Text TotalEnemy;
     public Text EnemyLeft;
-    private string sceneName;
-    public string[] scenes;
-    private float EnemyCount;
+    public float EnemyCount;
     private float enemyDied;
-    public Animator FadeInOut;
-    public GameObject PortalType;
+    public CanvasGroup EnemyCounter;
     public Text Timer;
     public CanvasGroup TimerImage;
-    public CanvasGroup EnemyCounter;
     private float TimeLeft;
+    public Animator FadeInOut;
+    public GameObject PortalType;
+    public string[] scenes;
 
     void Start()
     {
+        TotalEnemy.text = EnemyCount.ToString();
         TimeLeft = 60;
         EnemyCount = 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.GetComponent<Collider2D>().CompareTag("enemy"))
-        {
-            EnemyCount += 1;
-            enemyDied = 0;
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D col)
+    // {
+    //     if(col.GetComponent<Collider2D>().CompareTag("enemy"))
+    //     {
+    //         EnemyCount += 1;
+    //         enemyDied = 0;
+    //     }
+    // }
 
     public void EnemyKilled()
     {
@@ -49,10 +50,9 @@ public class MapRotater : MonoBehaviour
     {
         if(PortalType.GetComponent<NormalEnemySpawn>() != null)
         {
-            EnemyLeft.text = enemyDied.ToString();
-            TotalEnemy.text = EnemyCount.ToString();
-            TimerImage.alpha = 0;
             EnemyCounter.alpha = 1;
+            TimerImage.alpha = 0;
+            EnemyLeft.text = enemyDied.ToString();
         }
         if(PortalType.GetComponent<SurviveEnemySpawnManager>() != null)
         {

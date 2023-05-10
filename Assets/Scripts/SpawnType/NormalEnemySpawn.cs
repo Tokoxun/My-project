@@ -10,10 +10,12 @@ public class NormalEnemySpawn : MonoBehaviour
     //The amount of time before spawning starts
     public GameObject[] enemies;
     //Array of enemy prefabs
-    public int EnemyIndex = 0;
+    private int EnemyIndex = 0;
+    public MapRotater EnemyInWait;
 
     void Start()
     {
+        EnemyInWait.EnemyCount += enemies.Length;
         InvokeRepeating("Spawn", spawnDelay, spawnTime);
     }
 
