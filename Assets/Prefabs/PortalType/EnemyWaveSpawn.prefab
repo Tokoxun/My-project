@@ -100,8 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 5
   spawnDelay: 3
-  enemies: []
-  EnemyIndex: 0
+  enemies:
+  - {fileID: 8408000429237511647, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
+  - {fileID: 809111714509382282, guid: 7afbc2d9f608bed4993262db6ccf7412, type: 3}
 --- !u!61 &3773210872237166059
 BoxCollider2D:
   m_ObjectHideFlags: 0

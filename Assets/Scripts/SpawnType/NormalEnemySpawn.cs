@@ -11,11 +11,9 @@ public class NormalEnemySpawn : MonoBehaviour
     public GameObject[] enemies;
     //Array of enemy prefabs
     private int EnemyIndex = 0;
-    public MapRotater EnemyInWait;
 
     void Start()
     {
-        EnemyInWait.EnemyCount += enemies.Length;
         InvokeRepeating("Spawn", spawnDelay, spawnTime);
     }
 

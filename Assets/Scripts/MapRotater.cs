@@ -8,11 +8,8 @@ public class MapRotater : MonoBehaviour
 {
     private string sceneName;
     public CanvasGroup dialogBox;
-    public Text TotalEnemy;
-    public Text EnemyLeft;
     public float EnemyCount;
     private float enemyDied;
-    public CanvasGroup EnemyCounter;
     public Text Timer;
     public CanvasGroup TimerImage;
     private float TimeLeft;
@@ -22,19 +19,18 @@ public class MapRotater : MonoBehaviour
 
     void Start()
     {
-        TotalEnemy.text = EnemyCount.ToString();
         TimeLeft = 60;
         EnemyCount = 0;
     }
 
-    // private void OnTriggerEnter2D(Collider2D col)
-    // {
-    //     if(col.GetComponent<Collider2D>().CompareTag("enemy"))
-    //     {
-    //         EnemyCount += 1;
-    //         enemyDied = 0;
-    //     }
-    // }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.GetComponent<Collider2D>().CompareTag("enemy"))
+        {
+            EnemyCount += 1;
+            enemyDied = 0;
+        }
+    }
 
     public void EnemyKilled()
     {
@@ -50,9 +46,7 @@ public class MapRotater : MonoBehaviour
     {
         if(PortalType.GetComponent<NormalEnemySpawn>() != null)
         {
-            EnemyCounter.alpha = 1;
             TimerImage.alpha = 0;
-            EnemyLeft.text = enemyDied.ToString();
         }
         if(PortalType.GetComponent<SurviveEnemySpawnManager>() != null)
         {
@@ -67,7 +61,6 @@ public class MapRotater : MonoBehaviour
                 Timer.text = "Portal Closing";
             }
             TimerImage.alpha = 1;
-            EnemyCounter.alpha = 0; 
         }
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - MayorConversation
   - Ally
   - enemy
+  - NormalSpawn
   layers:
   - Default
   - TransparentFX
