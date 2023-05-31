@@ -6,19 +6,17 @@ using UnityEngine.UI;
 
 public class MapRotater : MonoBehaviour
 {
-    public CanvasGroup dialogBox;
-    public Text TotalEnemy;
-    public Text EnemyLeft;
     private string sceneName;
-    public string[] scenes;
-    private float EnemyCount;
+    public CanvasGroup dialogBox;
+    public float EnemyCount;
     private float enemyDied;
-    public Animator FadeInOut;
-    public GameObject PortalType;
     public Text Timer;
     public CanvasGroup TimerImage;
-    public CanvasGroup EnemyCounter;
     private float TimeLeft;
+    public Animator FadeInOut;
+    public GameObject PortalType;
+    public string[] scenes;
+    // public GameObject enem;
 
     void Start()
     {
@@ -31,7 +29,6 @@ public class MapRotater : MonoBehaviour
         if(col.GetComponent<Collider2D>().CompareTag("enemy"))
         {
             EnemyCount += 1;
-            enemyDied = 0;
         }
     }
 
@@ -47,12 +44,11 @@ public class MapRotater : MonoBehaviour
 
     void Update()
     {
+        // DetectionZone detect = enem.GetComponent<DetectionZone>();
+        // Debug.Log(detect.playerNotDetected);
         if(PortalType.GetComponent<NormalEnemySpawn>() != null)
         {
-            EnemyLeft.text = enemyDied.ToString();
-            TotalEnemy.text = EnemyCount.ToString();
             TimerImage.alpha = 0;
-            EnemyCounter.alpha = 1;
         }
         if(PortalType.GetComponent<SurviveEnemySpawnManager>() != null)
         {
@@ -67,7 +63,6 @@ public class MapRotater : MonoBehaviour
                 Timer.text = "Portal Closing";
             }
             TimerImage.alpha = 1;
-            EnemyCounter.alpha = 0; 
         }
     }
 

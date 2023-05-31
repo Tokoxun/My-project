@@ -10,7 +10,7 @@ public class NormalEnemySpawn : MonoBehaviour
     //The amount of time before spawning starts
     public GameObject[] enemies;
     //Array of enemy prefabs
-    public int EnemyIndex = 0;
+    private int EnemyIndex = 0;
 
     void Start()
     {
