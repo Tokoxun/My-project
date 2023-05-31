@@ -14,9 +14,15 @@ public class MapRotater : MonoBehaviour
     private float EnemyCount;
     private float enemyDied;
     public Animator FadeInOut;
+    public GameObject PortalType;
+    public Text Timer;
+    public CanvasGroup TimerImage;
+    public CanvasGroup EnemyCounter;
+    private float TimeLeft;
 
     void Start()
     {
+        TimeLeft = 60;
         EnemyCount = 0;
     }
 
@@ -41,8 +47,30 @@ public class MapRotater : MonoBehaviour
 
     void Update()
     {
-        EnemyLeft.text = enemyDied.ToString();
-        TotalEnemy.text = EnemyCount.ToString();
+        if(PortalType.GetComponent<NormalEnemySpawn>() != null)
+        {
+            EnemyLeft.text = enemyDied.ToString();
+            TotalEnemy.text = EnemyCount.ToString();
+            TimerImage.alpha = 0;
+            EnemyCounter.alpha = 1;
+        }
+        if(PortalType.GetComponent<SurviveEnemySpawnManager>() != null)
+        {
+            Debug.Log("Time Started");
+            TimeLeft -= Time.deltaTime;
+            Timer.text = TimeLeft.ToString();
+            if(TimeLeft > 0)
+            {
+                Debug.Log("Time Started");
+                Timer.text = TimeLeft.ToString();
+            }
+            else if(TimeLeft < 0)
+            {
+                Timer.text = "Portal Closing";
+            }
+            TimerImage.alpha = 1;
+            EnemyCounter.alpha = 0; 
+        }
     }
 
     IEnumerator LoadNextScene()
