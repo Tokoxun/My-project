@@ -9,7 +9,7 @@ public class DetectionZone : MonoBehaviour
     public float AIspeed = 2f;
     private float ProfAndAIDistx;
     private float ProfAndAIDisty;
-    private bool playerNotDetected = true;
+    public bool playerNotDetected = true;
     private GameObject detection = default;
     public Transform professor;
     public Transform AttackAreaColliderRotate;

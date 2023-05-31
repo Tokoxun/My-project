@@ -16,6 +16,7 @@ public class MapRotater : MonoBehaviour
     public Animator FadeInOut;
     public GameObject PortalType;
     public string[] scenes;
+    // public GameObject enem;
 
     void Start()
     {
@@ -28,7 +29,6 @@ public class MapRotater : MonoBehaviour
         if(col.GetComponent<Collider2D>().CompareTag("enemy"))
         {
             EnemyCount += 1;
-            enemyDied = 0;
         }
     }
 
@@ -44,6 +44,8 @@ public class MapRotater : MonoBehaviour
 
     void Update()
     {
+        // DetectionZone detect = enem.GetComponent<DetectionZone>();
+        // Debug.Log(detect.playerNotDetected);
         if(PortalType.GetComponent<NormalEnemySpawn>() != null)
         {
             TimerImage.alpha = 0;
