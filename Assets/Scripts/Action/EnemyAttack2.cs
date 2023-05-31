@@ -7,37 +7,44 @@ public class EnemyAttack2 : MonoBehaviour
     private Animator AIAnim;
     private SpriteRenderer AISpriteImage;
 
-    private float attackTimer = 2f;
+    private float attackTimer = 1f;
     private float timer = 0f;
-
+    private GameObject atkRange = default;
+    private bool inRange = false;
 
     // Start is called before the first frame update
     void Start()
     {
         AIAnim = (Animator)GetComponent(typeof(Animator));
         AISpriteImage =(SpriteRenderer)GetComponent(typeof(SpriteRenderer));
+        atkRange = transform.GetChild(0).gameObject;
+        atkRange.SetActive(false);
     }
 
-    public void EnemyAction()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
+        if(collider.GetComponent<Collider2D>().CompareTag("Ally"))
+        {
             Debug.Log("attacked");
-            timer += Time.deltaTime;
             AIAnim.SetBool("attacking", true);
+            atkRange.SetActive(true);
+            inRange = true;
+        }
+    }
 
-            if(AISpriteImage.flipX == false)
-            {
-                AIAnim.SetBool("attacking", true);
-            }
-            else if(AISpriteImage.flipX == true)
-            {
-                AIAnim.SetBool("attacking", true);
-            }
-
+    void Update()
+    {
+        if(inRange)
+        {   
+            timer += Time.deltaTime;
             if(timer >= attackTimer)
             {
+                Debug.Log("Atk finished");
                 timer = 0;
                 AIAnim.SetBool("attacking", false);
+                atkRange.SetActive(false);
+                inRange = false;
             }
-        
+        }
     }
 }

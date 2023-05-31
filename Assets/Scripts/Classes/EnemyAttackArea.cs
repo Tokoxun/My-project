@@ -12,17 +12,7 @@ public class EnemyAttackArea : MonoBehaviour
         if(collider.GetComponent<Health>() != null)
         {
             Health health = collider.GetComponent<Health>();
-            var check = GetComponentInParent<EnemyAttack>();
-            var check2 = GetComponentInParent<EnemyAttack2>();
             health.Damage(damage);
-            if (check != null)
-            {
-                check.EnemyAction();
-            }
-            else
-            {
-                check2.EnemyAction();
-            }
         }
     }
 }

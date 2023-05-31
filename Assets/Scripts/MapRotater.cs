@@ -56,12 +56,10 @@ public class MapRotater : MonoBehaviour
         }
         if(PortalType.GetComponent<SurviveEnemySpawnManager>() != null)
         {
-            Debug.Log("Time Started");
             TimeLeft -= Time.deltaTime;
             Timer.text = TimeLeft.ToString();
             if(TimeLeft > 0)
             {
-                Debug.Log("Time Started");
                 Timer.text = TimeLeft.ToString();
             }
             else if(TimeLeft < 0)

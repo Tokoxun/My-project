@@ -12,7 +12,8 @@ public class DetectionZone : MonoBehaviour
     private bool playerNotDetected = true;
     private GameObject detection = default;
     public Transform professor;
-    public Transform colliderRotate;
+    public Transform AttackAreaColliderRotate;
+    public Transform DetectionColliderRotate;
 
 
     void Start()
@@ -50,13 +51,15 @@ public class DetectionZone : MonoBehaviour
                 {
                     AIAnim.SetBool("walkUp", true);
                     AIAnim.SetBool("walkDown", false);
-                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
+                    AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
+                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
                 else if(ProfAndAIDisty < 0)
                 {
                     AIAnim.SetBool("walkDown", true);
                     AIAnim.SetBool("walkUp", false);
-                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
             }
 
@@ -69,13 +72,15 @@ public class DetectionZone : MonoBehaviour
                 {
                     AIAnim.SetBool("walkHorizontal", true);
                     AISpriteImage.flipX = true;
-                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
+                    AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
+                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
                 else if (ProfAndAIDistx < 0)
                 {
                     AIAnim.SetBool("walkHorizontal", true);
-                    colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                     AISpriteImage.flipX = false;
+                    AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
+                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
                 else
                 {
