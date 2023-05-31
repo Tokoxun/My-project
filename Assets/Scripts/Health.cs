@@ -1,25 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    public Slider HealthBar;
+    public Text HealthAndMaxHealth;
+    [SerializeField] float health = 100;
 
     private int MAX_HEALTH = 100;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            // Damage(10);
-        }
+        HealthBar.value = health;
+        HealthAndMaxHealth.text = health + "/" + MAX_HEALTH;
+        // if (Input.GetKeyDown(KeyCode.D))
+        // {
+        //     // Damage(10);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            // Heal(10);
-        }
+        // if (Input.GetKeyDown(KeyCode.H))
+        // {
+        //     // Heal(10);
+        // }
     }
 
     public void Damage(int amount)
