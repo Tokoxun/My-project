@@ -99,4 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 5
   spawnDelay: 3
-  enemies: []
+  enemies:
+  - {fileID: 7416396114853065106, guid: fc85e09341094e24e8c695e823120b34, type: 3}
+  - {fileID: 809111714509382282, guid: 7afbc2d9f608bed4993262db6ccf7412, type: 3}
