@@ -13,6 +13,5 @@ public class SpawningTrigger : MonoBehaviour
         int PointToSpawn = Random.Range(0, SpawnPoints.Length);
         SelectedPoint = SpawnPoints[PointToSpawn];
         Instantiate(SpawnType, SelectedPoint.transform.position, SelectedPoint.transform.rotation);
-        SelectedPoint.SetActive(false);
     }
 }

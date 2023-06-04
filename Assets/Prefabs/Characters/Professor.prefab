@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderRotate: {fileID: 8841538864594360278}
-  speed: 4
+  speed: 10
 --- !u!50 &8841538863751343202
 Rigidbody2D:
   serializedVersion: 4

@@ -22,6 +22,7 @@ public class MapRotater : MonoBehaviour
     {
         TimeLeft = 60;
         EnemyCount = 0;
+        enemyDied = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

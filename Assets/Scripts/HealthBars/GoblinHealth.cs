@@ -5,13 +5,13 @@ using UnityEngine;
 public class GoblinHealth : MonoBehaviour
 {
     [SerializeField] private int health = 100;
+    public MapRotater enemyLeft;
 
     // private int MAX_HEALTH = 100;
 
 
     public void Damage(int amount)
     {
-        MapRotater enemyLeft = GetComponentInParent<MapRotater>();
         if(amount < 0)
         {
             throw new System.ArgumentOutOfRangeException("Cannot have negative Damage");

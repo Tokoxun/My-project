@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SurviveEnemySpawnManager : MonoBehaviour
 {
-    public float spawnTime = 5f;
+    public float spawnTime = 4f;
     //The amount of time between each spawn
     public float spawnDelay = 3f;
     //The amount of time before spawning starts
@@ -12,7 +12,10 @@ public class SurviveEnemySpawnManager : MonoBehaviour
     //Array of enemy prefabs
     private float surviveTimer = 0;
     private float TimeOut = 60f;
-
+    private float spawnTimer;
+    // public Transform movingPoints;
+    // private Transform moving;
+    
 
     void Start()
     {

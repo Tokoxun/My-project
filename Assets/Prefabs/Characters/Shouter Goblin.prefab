@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1394015645
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d51a6f4d120b713479409732175030c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8408000428804673938}
   - component: {fileID: 8408000428804673937}
+  - component: {fileID: 7644260206441221204}
   m_Layer: 0
   m_Name: Detection Range
   m_TagString: Untagged
@@ -149,6 +150,19 @@ PolygonCollider2D:
       - {x: 0.35916132, y: -0.7962838}
       - {x: 0.51947916, y: -0.74639994}
       - {x: 0.7318978, y: -0.6029761}
+--- !u!114 &7644260206441221204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408000428804673939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8694ffccb108440a345ef55d396539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTrigger: {fileID: 7172888440848096524, guid: 154bdc2d146067e41bfbe4725d031af5, type: 3}
 --- !u!1 &8408000429237511647
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +179,7 @@ GameObject:
   - component: {fileID: 8408000429237511639}
   - component: {fileID: 8408000429237511637}
   - component: {fileID: 440026760129290609}
+  - component: {fileID: -4492420696753614175}
   m_Layer: 0
   m_Name: Shouter Goblin
   m_TagString: enemy
@@ -180,7 +195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408000429237511647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.54, y: -5.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.690786, y: 3.080139, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -316,7 +331,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408000429237511647}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e03133674c72d54991cc8209c2e6f47, type: 3}
   m_Name: 
@@ -328,7 +343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408000429237511647}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab3a89b724a6b7498a4d2ef13b23f68, type: 3}
   m_Name: 
@@ -345,7 +360,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f37373f6c0e6841b60f7fb2fe4a191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
+  enemyLeft: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
+--- !u!114 &-4492420696753614175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408000429237511647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe5616dc7fb327468f62e5479ef4735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AIspeed: 2
+  playerNotDetected: 1
+  professor: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
+  AttackAreaColliderRotate: {fileID: 8408000429551681858}
+  DetectionColliderRotate: {fileID: 8408000428804673938}
 --- !u!1 &8408000429551681859
 GameObject:
   m_ObjectHideFlags: 0

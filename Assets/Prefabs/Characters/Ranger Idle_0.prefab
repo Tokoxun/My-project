@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 7416396114853065100}
   - component: {fileID: 7416396114853065101}
   - component: {fileID: 7416396114853065096}
+  - component: {fileID: -1636360370564202512}
+  - component: {fileID: 7836113860184825803}
   m_Layer: 0
   m_Name: Ranger Idle_0
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7416396114853065106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.913162, y: -2.094545, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -170,8 +172,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8204eee5507995a49ac232e51532ced3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  professor: {fileID: 0}
-  bowPos: {fileID: 0}
+  professor: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
+  bowPos: {fileID: 7416396116113578534}
+--- !u!114 &-1636360370564202512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416396114853065106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80544735d94847046b5d58ded9dde5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7836113860184825803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416396114853065106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f37373f6c0e6841b60f7fb2fe4a191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  enemyLeft: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
 --- !u!1 &7416396115243883144
 GameObject:
   m_ObjectHideFlags: 0
