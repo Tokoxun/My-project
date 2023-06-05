@@ -11,7 +11,7 @@ public class DetectionZone2 : MonoBehaviour
     private float ProfAndAIDisty;
     private bool playerNotDetected = true;
     private GameObject detection = default;
-    public Transform professor;
+    private Transform professor;
     public Transform AttackAreaColliderRotate;
     public Transform DetectionColliderRotate;
 
@@ -29,16 +29,17 @@ public class DetectionZone2 : MonoBehaviour
     {
         if (collider.gameObject.tag == "Ally")
         {
+            professor = collider.transform;
             playerNotDetected = false;
             detection.SetActive(playerNotDetected);
         }
     }
     void Update()
-    {
-        ProfAndAIDistx = professor.transform.position.x - transform.position.x;
-        ProfAndAIDisty = professor.transform.position.y - transform.position.y; 
+    { 
         if(playerNotDetected == false)
         {
+            ProfAndAIDistx = professor.transform.position.x - transform.position.x;
+            ProfAndAIDisty = professor.transform.position.y - transform.position.y;
             transform.Translate(new Vector2(ProfAndAIDistx * AIspeed, ProfAndAIDisty * AIspeed) * Time.deltaTime);
             if(ProfAndAIDistx != 0)
             {

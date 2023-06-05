@@ -12,7 +12,7 @@ public class RangeDetectionZone : MonoBehaviour
     private GameObject detection;
     private bool attacks = false;
     private GameObject range;
-    public Transform professor;
+    private Transform professor;
     private float timeToAvoid;
     private float AvoidCooldown = 3f;
     private float AvoidDist = 6f;
@@ -33,6 +33,7 @@ public class RangeDetectionZone : MonoBehaviour
     {
         if (collider.gameObject.tag == "Ally")
         {
+            professor = collider.transform;
             playerNotDetected = false;
             detection.SetActive(playerNotDetected);
             attacks = true;
@@ -42,12 +43,12 @@ public class RangeDetectionZone : MonoBehaviour
 
     void Update()
     {
-        int profposy = Mathf.RoundToInt(professor.transform.position.y);
-        int AIposy = Mathf.RoundToInt(transform.position.y);
-        ProfAndAIDist = Vector2.Distance(professor.transform.position, transform.position);
-        ProfAndAIDisty = professor.transform.position.y - transform.position.y;
         if(playerNotDetected == false)
         {
+            int profposy = Mathf.RoundToInt(professor.transform.position.y);
+            int AIposy = Mathf.RoundToInt(transform.position.y);
+            ProfAndAIDist = Vector2.Distance(professor.transform.position, transform.position);
+            ProfAndAIDisty = professor.transform.position.y - transform.position.y;
             timeToAvoid += Time.deltaTime;
             if(ProfAndAIDist <= 5 && timeToAvoid >= AvoidCooldown)
             {    
