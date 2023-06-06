@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8204eee5507995a49ac232e51532ced3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  professor: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
   bowPos: {fileID: 7416396116113578534}
 --- !u!114 &-1636360370564202512
 MonoBehaviour:
@@ -199,7 +198,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
-  enemyLeft: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
 --- !u!1 &7416396115243883144
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ public class MapRotater : MonoBehaviour
     public float EnemyCount;
     private float enemyDied;
     public Text Timer;
-    public CanvasGroup TimerImage;
     private float TimeLeft;
     public Animator FadeInOut;
     public GameObject PortalType;
@@ -36,11 +35,6 @@ public class MapRotater : MonoBehaviour
     public void EnemyKilled()
     {
         enemyDied += 1;
-        Debug.Log(enemyDied);
-        if(enemyDied == EnemyCount)
-        {
-            StartCoroutine(LoadNextScene());
-        }
     }
 
     void Update()
@@ -49,17 +43,25 @@ public class MapRotater : MonoBehaviour
         // Debug.Log(detect.playerNotDetected);
         if(PortalType.GetComponent<NormalEnemySpawn>() != null)
         {
+            if(enemyDied == EnemyCount)
+            {
+                StartCoroutine(LoadNextScene());
+            }
             TimerImage.alpha = 0;
         }
         if(PortalType.GetComponent<SurviveEnemySpawnManager>() != null)
         {
             TimeLeft -= Time.deltaTime;
             Timer.text = TimeLeft.ToString();
+            if(TimeLeft <= 0 && enemyDied == EnemyCount)
+            {
+                StartCoroutine(LoadNextScene());
+            }
             if(TimeLeft > 0)
             {
                 Timer.text = TimeLeft.ToString();
             }
-            else if(TimeLeft < 0)
+            if(TimeLeft < 0)
             {
                 Timer.text = "Portal Closing";
             }
@@ -69,6 +71,7 @@ public class MapRotater : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
+        enemyDied = 0;
         dialogBox.alpha = 1;
         dialogBox.blocksRaycasts = true;
         FadeInOut.SetBool("Start", true);
@@ -77,6 +80,5 @@ public class MapRotater : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         dialogBox.alpha = 0;
         dialogBox.blocksRaycasts = false;
-        enemyDied = 0;
     }
 }

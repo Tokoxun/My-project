@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8694ffccb108440a345ef55d396539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTrigger: {fileID: 7172888440848096524, guid: 154bdc2d146067e41bfbe4725d031af5, type: 3}
+  enemyTrigger: {fileID: 0}
 --- !u!1 &8408000429237511647
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +361,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  enemyLeft: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
 --- !u!114 &-4492420696753614175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +375,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIspeed: 2
   playerNotDetected: 1
-  professor: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
   AttackAreaColliderRotate: {fileID: 8408000429551681858}
   DetectionColliderRotate: {fileID: 8408000428804673938}
 --- !u!1 &8408000429551681859
