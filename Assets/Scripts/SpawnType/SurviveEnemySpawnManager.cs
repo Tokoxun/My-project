@@ -13,8 +13,7 @@ public class SurviveEnemySpawnManager : MonoBehaviour
     private float surviveTimer = 0;
     private float TimeOut = 60f;
     private float spawnTimer;
-    // public Transform movingPoints;
-    // private Transform moving;
+    private Transform movingPoints;
     
 
     void Start()
@@ -32,9 +31,18 @@ public class SurviveEnemySpawnManager : MonoBehaviour
     void Update()
     {
         surviveTimer += Time.deltaTime;
+        spawnTimer += Time.deltaTime;
         if(surviveTimer >= TimeOut)
         {
             Destroy(gameObject);
+        }
+        if(spawnTimer >= spawnTime)
+        {
+            GameObject points = GameObject.Find("SpawnPoints");
+            int PointToSpawn = Random.Range(0, 3);
+            movingPoints = points.transform.GetChild(PointToSpawn);
+            transform.position = movingPoints.transform.position;
+            spawnTimer = 0;
         }
     }
 }

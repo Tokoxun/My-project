@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class NormalEnemySpawn : MonoBehaviour
 {
-    public float spawnTime = 5f;
+    public float spawnTime = 3f;
     //The amount of time between each spawn
     public float spawnDelay = 3f;
     //The amount of time before spawning starts
     public GameObject[] enemies;
     //Array of enemy prefabs
     private int EnemyIndex = 0;
+    private Transform movingPoints;
+    private float spawnTimer;
 
     void Start()
     {
@@ -28,5 +30,18 @@ public class NormalEnemySpawn : MonoBehaviour
             Instantiate(enemies[EnemyIndex], transform.position, transform.rotation);
             EnemyIndex += 1;
         } 
+    }
+
+    void Update()
+    {
+        spawnTimer += Time.deltaTime;
+        if(spawnTimer >= spawnTime)
+        {
+            GameObject points = GameObject.Find("SpawnPoints");
+            int PointToSpawn = Random.Range(0, 3);
+            movingPoints = points.transform.GetChild(PointToSpawn);
+            transform.position = movingPoints.transform.position;
+            spawnTimer = 0;
+        }
     }
 }
