@@ -11,6 +11,7 @@ public class MapRotater : MonoBehaviour
     public float EnemyCount;
     private float enemyDied;
     public Text Timer;
+    public CanvasGroup TimerImage;
     private float TimeLeft;
     public Animator FadeInOut;
     public GameObject PortalType;
@@ -53,7 +54,7 @@ public class MapRotater : MonoBehaviour
         {
             TimeLeft -= Time.deltaTime;
             Timer.text = TimeLeft.ToString();
-            if(TimeLeft <= 0 && enemyDied == EnemyCount)
+            if(TimeLeft < 0 && enemyDied == EnemyCount)
             {
                 StartCoroutine(LoadNextScene());
             }
@@ -71,6 +72,7 @@ public class MapRotater : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
+        EnemyCount = 0;
         enemyDied = 0;
         dialogBox.alpha = 1;
         dialogBox.blocksRaycasts = true;
