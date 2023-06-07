@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NormalEnemySpawn : MonoBehaviour
 {
-    public float spawnTime = 3f;
+    public float spawnTime = 2f;
     //The amount of time between each spawn
-    public float spawnDelay = 3f;
+    public float spawnDelay = 1f;
     //The amount of time before spawning starts
     public GameObject[] enemies;
     //Array of enemy prefabs
