@@ -15,7 +15,7 @@ public class RangeDetectionZone : MonoBehaviour
     private Transform professor;
     private float timeToAvoid;
     private float AvoidCooldown = 3f;
-    private float AvoidDist = 6f;
+    private float AvoidDist = 3f;
     public Transform bowPos;
 
     void Start()

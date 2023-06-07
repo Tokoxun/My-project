@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
     private float timeBeforeDespawn;
     private float despawnTime = 2f;
     public int damage = 5;
-    public Health health;
 
     private void Update()
     {
@@ -20,6 +19,7 @@ public class Projectile : MonoBehaviour
     {
         if (col.gameObject.tag == "Ally")
         {
+            Health health = col.GetComponent<Health>();
             health.Damage(damage);
             Destroy(gameObject);
             timeBeforeDespawn = 0;
