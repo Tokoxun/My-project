@@ -72,15 +72,15 @@ public class MapRotater : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
+        sceneName = scenes[Random.Range(0, scenes.Length)];
         EnemyCount = 0;
         enemyDied = 0;
         dialogBox.alpha = 1;
         dialogBox.blocksRaycasts = true;
         FadeInOut.SetBool("Start", true);
         yield return new WaitForSeconds(2f);
-        sceneName = scenes[Random.Range(0, scenes.Length)];
         SceneManager.LoadScene(sceneName);
-        dialogBox.alpha = 0;
-        dialogBox.blocksRaycasts = false;
+        // dialogBox.alpha = 0;
+        // dialogBox.blocksRaycasts = false;
     }
 }
