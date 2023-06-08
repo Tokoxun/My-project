@@ -10,6 +10,7 @@ TagManager:
   - Ally
   - enemy
   - NormalSpawn
+  - ShowOnPause
   layers:
   - Default
   - TransparentFX
