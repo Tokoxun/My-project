@@ -7,11 +7,16 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     GameObject[] pauseObjects;
+    public string[] scenes;
+    private string sceneName;
+    private GameObject deathScreen;
 
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
+        deathScreen = GameObject.Find("DeathScreen");
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+        deathScreen.SetActive(false);
 		hidePaused();
 	}
 
@@ -73,5 +78,17 @@ public class UIManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void TryAgain()
+    {
+        sceneName = scenes[Random.Range(0, scenes.Length)];
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void PlayerDied()
+    {
+        Time.timeScale = 0;
+        deathScreen.SetActive(true);
     }
 }

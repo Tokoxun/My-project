@@ -29,6 +29,7 @@ public class Health : MonoBehaviour
 
     public void Damage(int amount)
     {
+        UIManager died = FindObjectOfType<UIManager>();
         if(amount < 0)
         {
             throw new System.ArgumentOutOfRangeException("Cannot have negative Damage");
@@ -39,7 +40,7 @@ public class Health : MonoBehaviour
 
         if(this.health <= 0)
         {
-            Die();
+            died.PlayerDied();
         }
     }
 
@@ -62,9 +63,9 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void Die()
-    {
-        Debug.Log("I am Dead!");
-        Destroy(gameObject);
-    }
+    // private void Die()
+    // {
+    //     Debug.Log("I am Dead!");
+    //     Destroy(gameObject);
+    // }
 }
