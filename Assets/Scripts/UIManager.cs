@@ -10,13 +10,18 @@ public class UIManager : MonoBehaviour
     public string[] scenes;
     private string sceneName;
     private GameObject deathScreen;
+	private GameObject instructionMenu;
+	private GameObject exitInstruction;
 
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
+		instructionMenu = GameObject.Find("ControlsImage");
         deathScreen = GameObject.Find("DeathScreen");
+		exitInstruction = GameObject.Find("Exit");
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         deathScreen.SetActive(false);
+		instructionMenu.SetActive(false);
 		hidePaused();
 	}
 
@@ -80,7 +85,7 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void TryAgain()
+    public void LoadScene()
     {
         sceneName = scenes[Random.Range(0, scenes.Length)];
         SceneManager.LoadScene(sceneName);
@@ -91,4 +96,14 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
         deathScreen.SetActive(true);
     }
+
+	public void Instructions()
+	{
+		instructionMenu.SetActive(true);
+	}
+
+	public void ExitInstruction()
+	{
+		instructionMenu.SetActive(false);
+	}
 }
