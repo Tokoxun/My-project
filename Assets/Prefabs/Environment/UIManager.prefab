@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d34d5ad7ab249c47a28a53c93d9c07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenes:
+  - Assets/Scenes/Town.unity
+  - Assets/Scenes/SnowMountain.unity
+  - Assets/Scenes/Bar.unity
+  - Assets/Scenes/Forest.unity
