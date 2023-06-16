@@ -7,8 +7,12 @@ public class Projectile : MonoBehaviour
     private float speed = 5f;
     private float timeBeforeDespawn;
     private float despawnTime = 2f;
-    public int damage = 5;
+    public float damage = 5;
 
+    void Start()
+    {
+        Difficulty.Instance.Buff(damage);
+    }
     private void Update()
     {
         timeBeforeDespawn += Time.deltaTime;

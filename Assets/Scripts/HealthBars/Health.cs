@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         // }
     }
 
-    public void Damage(int amount)
+    public void Damage(float amount)
     {
         UIManager died = FindObjectOfType<UIManager>();
         if(amount < 0)
