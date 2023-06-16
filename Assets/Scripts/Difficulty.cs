@@ -12,7 +12,14 @@ public class Difficulty : Singleton<Difficulty>
     {
         EnemyAttackArea enemAtk = FindObjectOfType<EnemyAttackArea>();
         Projectile arrowDmg = FindObjectOfType<Projectile>();
-        enemAtk.damage = dmg *= diff;
-        arrowDmg.damage = dmg *= diff;
+        if(enemAtk != null)
+        {
+            enemAtk.damage = dmg *= diff;
+        }
+        if(arrowDmg != null)
+        {
+            arrowDmg.damage = dmg *= diff;
+        }
+        
     }
 }
