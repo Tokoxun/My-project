@@ -6,7 +6,7 @@ public class Difficulty : Singleton<Difficulty>
 {
     protected Difficulty()
     {}
-    public float diff = 1f;
+    public float diff = 1.0f;
     private GameObject enem;
     public void Buff(float dmg)
     {
