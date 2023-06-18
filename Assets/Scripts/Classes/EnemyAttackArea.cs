@@ -5,8 +5,12 @@ using UnityEngine;
 public class EnemyAttackArea : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int damage = 3;
+    public float damage = 3f;
 
+    void Start()
+    {
+        Difficulty.Instance.Buff(damage);
+    }
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.GetComponent<Health>() != null)

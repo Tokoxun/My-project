@@ -16,6 +16,7 @@ public class MapRotater : MonoBehaviour
     public Animator FadeInOut;
     public GameObject PortalType;
     public string[] scenes;
+    public float multiplier = 0.1f;
     // public GameObject enem;
 
     void Start()
@@ -79,6 +80,8 @@ public class MapRotater : MonoBehaviour
         dialogBox.blocksRaycasts = true;
         FadeInOut.SetBool("Start", true);
         yield return new WaitForSeconds(2f);
+        Difficulty addDiff = FindObjectOfType<Difficulty>();
+        addDiff.diff = addDiff.diff + multiplier;
         SceneManager.LoadScene(sceneName);
         // dialogBox.alpha = 0;
         // dialogBox.blocksRaycasts = false;

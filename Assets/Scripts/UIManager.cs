@@ -82,6 +82,8 @@ public class UIManager : MonoBehaviour
 
     public void loadScene()
     {
+		Difficulty removeDiff = FindObjectOfType<Difficulty>();
+		removeDiff.diff = 1.0f;
         sceneName = scenes[Random.Range(0, scenes.Length)];
         SceneManager.LoadScene(sceneName);
     }

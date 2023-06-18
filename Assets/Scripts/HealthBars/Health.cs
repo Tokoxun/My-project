@@ -14,8 +14,9 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HealthBar.value = health;
-        HealthAndMaxHealth.text = health + "/" + MAX_HEALTH;
+        int roundedHealth = Mathf.RoundToInt(health);
+        HealthBar.value = roundedHealth;
+        HealthAndMaxHealth.text = roundedHealth + "/" + MAX_HEALTH;
         // if (Input.GetKeyDown(KeyCode.D))
         // {
         //     // Damage(10);
@@ -27,7 +28,7 @@ public class Health : MonoBehaviour
         // }
     }
 
-    public void Damage(int amount)
+    public void Damage(float amount)
     {
         UIManager died = FindObjectOfType<UIManager>();
         if(amount < 0)
