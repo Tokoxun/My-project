@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6001213895632896210, guid: 7f89158ef081bd04dbf69f774af1a80c, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -168,10 +168,10 @@ RectTransform:
   m_Father: {fileID: 5190885937923863392}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00099182}
-  m_SizeDelta: {x: 783, y: 334}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000061035156, y: -1.4187927}
+  m_SizeDelta: {x: 0, y: -2.380005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &894509369008092754
 CanvasRenderer:
@@ -346,10 +346,10 @@ RectTransform:
   m_Father: {fileID: 5190885937923863392}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207, y: 0.0010071}
-  m_SizeDelta: {x: 798, y: 351}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0075683594, y: 0.001159668}
+  m_SizeDelta: {x: 0, y: 0.46002197}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5034424098765430511
 CanvasRenderer:
@@ -424,10 +424,10 @@ RectTransform:
   m_Father: {fileID: 5190885937923863392}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00050354004}
-  m_SizeDelta: {x: 798, y: 351}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.06506348, y: -1.4179077}
+  m_SizeDelta: {x: -0.099975586, y: -2.380005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6434144951365577343
 CanvasRenderer:
@@ -479,6 +479,7 @@ GameObject:
   - component: {fileID: 5190885937923863393}
   - component: {fileID: 5190885937923863398}
   - component: {fileID: 5190885937923863399}
+  - component: {fileID: 9021686817196287264}
   m_Layer: 5
   m_Name: WaveCounter
   m_TagString: Untagged
@@ -545,10 +546,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1366, y: 768}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -573,6 +574,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &9021686817196287264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190885937923863396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901fc882d58382a4b9dbf6ec73730be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5190885938262976983
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.3, y: 0.0000061989}
+  m_AnchoredPosition: {x: 161.7, y: 0.0000061989}
   m_SizeDelta: {x: 45.2097, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5190885938349920226
@@ -778,7 +791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.6360931, y: 0.1054101}
+  m_AnchoredPosition: {x: 1.6360931, y: 0.10540962}
   m_SizeDelta: {x: 0.271, y: 0.2108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5190885938537742145
@@ -854,10 +867,10 @@ RectTransform:
   m_Father: {fileID: 5190885937923863392}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287.63, y: 142.84}
-  m_SizeDelta: {x: 207.7395, y: 48.328003}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 202.27762, y: -44.639587}
+  m_SizeDelta: {x: 404.2947, y: 83.6071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5190885938747699508
 CanvasRenderer:
@@ -933,8 +946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.369, y: 0}
-  m_SizeDelta: {x: 145.0011, y: 10.677}
+  m_AnchoredPosition: {x: -38.4, y: 0.0000035167}
+  m_SizeDelta: {x: 309.5586, y: 28.3414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5190885938937686903
 MonoBehaviour:
@@ -1022,8 +1035,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00063574, y: -0.000005722}
-  m_SizeDelta: {x: 145, y: 11.0988}
+  m_AnchoredPosition: {x: 1.6356, y: -0.000091553}
+  m_SizeDelta: {x: 309.83, y: 28.341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5190885939150689279
 CanvasRenderer:
@@ -1211,10 +1224,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1258,10 +1271,10 @@ RectTransform:
   m_Father: {fileID: 5190885937923863392}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 142}
-  m_SizeDelta: {x: 98.2463, y: 50.003}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.065078, y: -43.221}
+  m_SizeDelta: {x: 160.4048, y: 86.445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5403330804421195712
 CanvasRenderer:
@@ -1572,7 +1585,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0.05540227, g: 0.7830189, b: 0.114271976, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1597,7 +1610,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6001213895632896210, guid: 7f89158ef081bd04dbf69f774af1a80c, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: TryAgain
+        m_MethodName: loadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
