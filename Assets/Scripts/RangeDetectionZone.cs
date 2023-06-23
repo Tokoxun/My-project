@@ -16,7 +16,6 @@ public class RangeDetectionZone : MonoBehaviour
     private float timeToAvoid;
     private float AvoidCooldown = 3f;
     private float AvoidDist = 3f;
-    public Transform bowPos;
 
     void Start()
     {
@@ -55,33 +54,33 @@ public class RangeDetectionZone : MonoBehaviour
                 if(professor.transform.position.x > transform.position.x)
                 {
                     transform.Translate(new Vector2(transform.position.x - AvoidDist, 0) * Time.deltaTime);
-                    AISpriteImage.flipX = true;
-                    bowPos.transform.position = new Vector2(0.2f, 0);
-                    AIAnim.SetBool("walking", true);
+                    // AISpriteImage.flipX = true;
+                    transform.rotation = Quaternion.Euler(0, 550, 0);
+                    // AIAnim.SetBool("walking", true);
                 }
 
                 else if(professor.transform.position.x < transform.position.x)
                 {
                     transform.Translate(new Vector2(transform.position.x + AvoidDist, 0) * Time.deltaTime);
-                    AISpriteImage.flipX = false;
-                    bowPos.transform.position = new Vector2(-0.2f, 0);
-                    AIAnim.SetBool("walking", true);
+                    // AISpriteImage.flipX = false;
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    // AIAnim.SetBool("walking", true);
                 }
             }
             if(ProfAndAIDist > 5 && timeToAvoid >= AvoidCooldown)
             {
                 if(professor.transform.position.x > transform.position.x)
                 {
-                    AISpriteImage.flipX = false;
-                    bowPos.transform.position = new Vector2(0.2f, 0);
-                    AIAnim.SetBool("walking", false);
+                    // AISpriteImage.flipX = false;
+                    transform.rotation = Quaternion.Euler(0, 550, 0);
+                    // AIAnim.SetBool("walking", false);
                     timeToAvoid = 0;
                 }
                 else if(professor.transform.position.x < transform.position.x)
                 {
-                    AISpriteImage.flipX = true;
-                    bowPos.transform.position = new Vector2(-0.2f, 0);
-                    AIAnim.SetBool("walking", false);
+                    // AISpriteImage.flipX = true;
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    // AIAnim.SetBool("walking", false);
                     timeToAvoid = 0;
                 }
             }
