@@ -17,10 +17,12 @@ public class MapRotater : MonoBehaviour
     public GameObject PortalType;
     public string[] scenes;
     public float multiplier = 0.1f;
+    public GoogleMobileAdsDemoScript AdsDisplay;
     // public GameObject enem;
 
     void Start()
     {
+        AdsDisplay.LoadInterstitialAd();
         TimeLeft = 60;
         EnemyCount = 0;
         enemyDied = 0;
@@ -78,6 +80,7 @@ public class MapRotater : MonoBehaviour
         enemyDied = 0;
         dialogBox.alpha = 1;
         dialogBox.blocksRaycasts = true;
+        AdsDisplay.ShowAd();
         FadeInOut.SetBool("Start", true);
         yield return new WaitForSeconds(2f);
         Difficulty addDiff = FindObjectOfType<Difficulty>();
