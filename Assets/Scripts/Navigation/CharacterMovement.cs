@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EasyJoystick;
 
 public class CharacterMovement : MonoBehaviour{ 
   private Rigidbody2D playerRigidBody2D; 
@@ -15,6 +16,8 @@ public class CharacterMovement : MonoBehaviour{
   public Transform colliderRotate;
 
   public float speed = 4.0f; 
+  // [SerializeField] private Joystick joystick;
+  public Joystick joystick;
   void Awake(){
         playerRigidBody2D = (Rigidbody2D)GetComponent(typeof(Rigidbody2D));
         playerAnim=(Animator)GetComponent(typeof(Animator));
@@ -22,8 +25,8 @@ public class CharacterMovement : MonoBehaviour{
   }
 
   void Update (){
-      movePlayerHorizontal = Input.GetAxis("Horizontal"); 
-      movePlayerVertical = Input.GetAxis("Vertical"); 
+      movePlayerHorizontal = joystick.Horizontal(); 
+      movePlayerVertical = joystick.Vertical(); 
       movement = new Vector2(movePlayerHorizontal,movePlayerVertical); 
 
       playerRigidBody2D.velocity=movement*speed;
