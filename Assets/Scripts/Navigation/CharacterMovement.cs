@@ -26,19 +26,21 @@ public class CharacterMovement : MonoBehaviour{
 
   void Update (){
       movePlayerHorizontal = joystick.Horizontal(); 
-      movePlayerVertical = joystick.Vertical(); 
+      movePlayerVertical = joystick.Vertical();
+      int PlayerHorizontal = Mathf.RoundToInt(movePlayerHorizontal);
+      int PlayerVertical = Mathf.RoundToInt(movePlayerVertical); 
       movement = new Vector2(movePlayerHorizontal,movePlayerVertical); 
 
       playerRigidBody2D.velocity=movement*speed;
-      if(movePlayerVertical!=0){ 
+      if(PlayerVertical!=0){ 
         playerAnim.SetBool("xMove",false); 
         playerSpriteImage.flipX=false; 
 
-        if(movePlayerVertical>0){ 
+        if(PlayerVertical>0){ 
         playerAnim.SetInteger("yMove",1);
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180); 
         }
-        else if(movePlayerVertical<0){ 
+        else if(PlayerVertical<0){ 
         playerAnim.SetInteger("yMove",-1);
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0); 
         }
@@ -48,13 +50,13 @@ public class CharacterMovement : MonoBehaviour{
       else{ 
         playerAnim.SetInteger("yMove",0); 
 
-        if(movePlayerHorizontal>0){ 
+        if(PlayerHorizontal>0){ 
         playerAnim.SetBool("xMove",true); 
         playerSpriteImage.flipX=false; 
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
 
-      else if(movePlayerHorizontal<0){ 
+      else if(PlayerHorizontal<0){ 
         playerAnim.SetBool("xMove",true); 
         playerSpriteImage.flipX=true; 
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
@@ -64,7 +66,7 @@ public class CharacterMovement : MonoBehaviour{
       }
       }
 
-      if(movePlayerVertical==0 && movePlayerHorizontal==0){ 
+      if(PlayerVertical==0 && PlayerHorizontal==0){ 
             playerAnim.SetBool("moving",false); 
       }
       else{ 
