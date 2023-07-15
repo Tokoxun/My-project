@@ -1538,18 +1538,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 505776999}
-    - target: {fileID: 126045302287063960, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: jumpButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 240008881929997326, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1960229999}
-    - target: {fileID: 240008881929997326, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: pauseControl
-      objectReference: {fileID: 0}
     - target: {fileID: 5190885937923863392, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1650,10 +1638,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 505776998}
-    - target: {fileID: 7741456713217600628, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: attackButton
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3030,17 +3014,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1960229999 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6001213895632896210, guid: 7f89158ef081bd04dbf69f774af1a80c, type: 3}
-  m_PrefabInstance: {fileID: 1290584042}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d34d5ad7ab249c47a28a53c93d9c07c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2003364665
 GameObject:
   m_ObjectHideFlags: 0

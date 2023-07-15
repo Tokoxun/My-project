@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 		Time.timeScale = 1;
         deathScreen = GameObject.Find("DeathScreen");
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+		deathScreen.SetActive(false);
 		hidePaused();
 	}
 
