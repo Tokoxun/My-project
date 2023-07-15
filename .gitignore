@@ -57,6 +57,7 @@ sysinfo.txt
 *.aab
 *.unitypackage
 *.app
+*idea/
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -69,3 +70,11 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 *.csproj
+
+# Android plugin
+/[Aa]ssets/Plugins/Android/
+
+# Project information and MonoBleedingEdge
+MonoBleedingEdge/
+My project_BurstDebugInformation_DoNotShip/
+My project_Data/
