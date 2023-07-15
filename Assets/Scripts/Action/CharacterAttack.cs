@@ -24,24 +24,8 @@ public class CharacterAttack : MonoBehaviour
         profSpriteImage =(SpriteRenderer)GetComponent(typeof(SpriteRenderer));
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            Attack();
-            profAnim.SetBool("yAttk", true);
-
-            if(profSpriteImage.flipX == false)
-            {
-                profAnim.SetBool("xAttk", true);
-            }
-            else if(profSpriteImage.flipX == true)
-            {
-                profAnim.SetBool("xAttk", true);
-            }
-        }
-
         if(attacking)
         {
             timer += Time.deltaTime;
@@ -58,10 +42,27 @@ public class CharacterAttack : MonoBehaviour
         }
     }
 
-    private void Attack()
+    // Update is called once per frame
+    public void attackButton()
     {
+        // Attack();
         attacking = true;
         attackArea.SetActive(attacking);
-        Debug.Log("attacking");
+        profAnim.SetBool("yAttk", true);
+        if(profSpriteImage.flipX == false)
+        {
+            profAnim.SetBool("xAttk", true);
+        }
+        else if(profSpriteImage.flipX == true)
+        {
+            profAnim.SetBool("xAttk", true);
+        }
     }
+
+    // private void Attack()
+    // {
+    //     attacking = true;
+    //     attackArea.SetActive(attacking);
+    //     Debug.Log("attacking");
+    // }
 }
