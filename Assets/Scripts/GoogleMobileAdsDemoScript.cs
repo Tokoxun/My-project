@@ -9,8 +9,8 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
     // These ad units are configured to always serve test ads.
     #if UNITY_ANDROID
       private string _adUnitId = "ca-app-pub-3940256099942544/1033173712";
-    #elif UNITY_IPHONE
-      private string _adUnitId = "ca-app-pub-3940256099942544/4411468910";
+    // #elif UNITY_IPHONE
+    //   private string _adUnitId = "ca-app-pub-3940256099942544/4411468910";
     #else
       private string _adUnitId = "unused";
     #endif
@@ -18,11 +18,9 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
     private InterstitialAd interstitialAd;
     public void Start()
     {
+        MobileAds.RaiseAdEventsOnUnityMainThread = true;
         // Initialize the Google Mobile Ads SDK.
-        MobileAds.Initialize((InitializationStatus initStatus) =>
-        {
-            // This callback is called once the MobileAds SDK is initialized.
-        });
+        MobileAds.Initialize(initStatus => { });
     }
 
       /// <summary>
