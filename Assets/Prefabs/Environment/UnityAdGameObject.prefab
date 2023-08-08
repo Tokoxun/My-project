@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4988323961091882634
 MonoBehaviour:
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a56d6f2973ac6848a480ac78315a03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _androidGameId: 
-  _iOSGameId: 
+  _androidGameId: 5375023
+  _iOSGameId: 5375022
   _testMode: 1
   AdDisplay: {fileID: 0}
