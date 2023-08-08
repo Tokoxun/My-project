@@ -17,10 +17,12 @@ public class MapRotater : MonoBehaviour
     public GameObject PortalType;
     public string[] scenes;
     public float multiplier = 0.1f;
+    public UnityAdDisplay UnityAd;
     // public GameObject enem;
 
     void Start()
     {
+        UnityAd.ShowAd();
         TimeLeft = 60;
         EnemyCount = 0;
         enemyDied = 0;
