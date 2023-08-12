@@ -10,7 +10,6 @@ public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
     [SerializeField] bool _testMode = true;
     private string _gameId;
 
-    public UnityAdDisplay AdDisplay;
  
     void Awake()
     {
@@ -36,7 +35,6 @@ public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
-        AdDisplay.LoadAd();
     }
  
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)

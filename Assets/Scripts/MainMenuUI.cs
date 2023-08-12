@@ -8,14 +8,9 @@ public class MainMenuUI : MonoBehaviour
 {
     public string[] scenes;
     private string sceneName;
-    private GameObject instructionMenu;
-	private GameObject exitInstruction;
     // Start is called before the first frame update
     void Start()
     {
-        instructionMenu = GameObject.Find("controlImage");
-        exitInstruction = GameObject.Find("Exit");
-        instructionMenu.SetActive(false);
     }
 
     public void loadScene()
@@ -24,13 +19,4 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-	public void Instructions()
-	{
-		instructionMenu.SetActive(true);
-	}
-
-	public void ExitInstruction()
-	{
-		instructionMenu.SetActive(false);
-	}
 }
