@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Threading;
 
 public class MapRotater : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class MapRotater : MonoBehaviour
     void Start()
     {
         UnityAd.LoadAd();
+        Thread.Sleep(2000);
         UnityAd.ShowAd();
         TimeLeft = 60;
         EnemyCount = 0;
