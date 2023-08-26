@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Threading;
 
 public class MapRotater : MonoBehaviour
 {
@@ -17,12 +18,14 @@ public class MapRotater : MonoBehaviour
     public GameObject PortalType;
     public string[] scenes;
     public float multiplier = 0.1f;
-    public GoogleMobileAdsDemoScript AdsDisplay;
+    public UnityAdDisplay UnityAd;
     // public GameObject enem;
 
     void Start()
     {
-        AdsDisplay.LoadInterstitialAd();
+        UnityAd.LoadAd();
+        Thread.Sleep(2000);
+        UnityAd.ShowAd();
         TimeLeft = 60;
         EnemyCount = 0;
         enemyDied = 0;
@@ -80,7 +83,6 @@ public class MapRotater : MonoBehaviour
         enemyDied = 0;
         dialogBox.alpha = 1;
         dialogBox.blocksRaycasts = true;
-        AdsDisplay.ShowAd();
         FadeInOut.SetBool("Start", true);
         yield return new WaitForSeconds(2f);
         Difficulty addDiff = FindObjectOfType<Difficulty>();
