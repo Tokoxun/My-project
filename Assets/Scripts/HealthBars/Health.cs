@@ -40,8 +40,21 @@ public class Health : MonoBehaviour
             throw new System.ArgumentOutOfRangeException("Cannot have negative Damage");
         }
 
-        this.health -= amount;
-        Debug.Log(this.health);
+        if(shield > 0)
+        {
+            this.shield -= amount;
+            if(shield < 0)
+            {
+                this.health -= this.shield;
+                shield = 0;
+            }
+        }
+
+        if(shield == 0)
+        {
+            this.health -= amount;
+            Debug.Log(this.health);
+        }
 
         if(this.health <= 0)
         {
