@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public Slider ShieldBar;
     public Slider HealthBar;
     public Text HealthAndMaxHealth;
     [SerializeField] float health = 100;
+    [SerializeField] float shield = 0;
 
     private int MAX_HEALTH = 100;
 
     // Update is called once per frame
     void Update()
     {
+        int roundedShield = Mathf.RoundToInt(shield);
+        ShieldBar.value = roundedShield;
         int roundedHealth = Mathf.RoundToInt(health);
         HealthBar.value = roundedHealth;
         HealthAndMaxHealth.text = roundedHealth + "/" + MAX_HEALTH;
@@ -45,14 +49,14 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void Heal(int amount)
+    public void Heal(int HealthAmount)
     {
-        if (amount < 0)
+        if (HealthAmount < 0)
         {
             throw new System.ArgumentOutOfRangeException("Cannot have negative healing");
         }
 
-        bool wouldBeOverMaxHealth = health + amount > MAX_HEALTH;
+        bool wouldBeOverMaxHealth = health + HealthAmount > MAX_HEALTH;
 
         if (wouldBeOverMaxHealth)
         {
@@ -60,7 +64,22 @@ public class Health : MonoBehaviour
         }
         else
         {
-            this.health += amount;
+            this.health += HealthAmount;
+        }
+    }
+
+    public void Armor(int ShieldAmount)
+    {
+
+        bool OverProtect = shield + ShieldAmount > MAX_HEALTH;
+
+        if (OverProtect)
+        {
+            this.shield = MAX_HEALTH;
+        }
+        else
+        {
+            this.shield += ShieldAmount;
         }
     }
 
