@@ -1251,6 +1251,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8408000429551681858, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
   m_PrefabInstance: {fileID: 1323158745}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &990420790 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1292897430055936470, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+  m_PrefabInstance: {fileID: 1270140527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1023454973 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
@@ -2924,11 +2929,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1919537409 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1292897430055936470, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-  m_PrefabInstance: {fileID: 1270140527}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1930409247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3188,7 +3188,7 @@ PrefabInstance:
     - target: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
       propertyPath: FadeInOut
       value: 
-      objectReference: {fileID: 1919537409}
+      objectReference: {fileID: 990420790}
     - target: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
       propertyPath: dialogBox
       value: 
