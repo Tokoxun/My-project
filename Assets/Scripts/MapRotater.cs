@@ -15,6 +15,9 @@ public class MapRotater : MonoBehaviour
     public CanvasGroup TimerImage;
     private float TimeLeft;
     public Animator FadeInOut;
+    private GameObject FadeInOutImage;
+    private float FadeOutDuration = 2f;
+    private float FadeOutTimer = 0f;
     public GameObject PortalType;
     public string[] scenes;
     public float multiplier = 0.1f;
@@ -26,6 +29,8 @@ public class MapRotater : MonoBehaviour
         UnityAd.LoadAd();
         Thread.Sleep(2000);
         UnityAd.ShowAd();
+        FadeInOut.SetBool("Start", true);
+        FadeInOutImage = GameObject.Find("FadeInOutImage");
         TimeLeft = 60;
         EnemyCount = 0;
         enemyDied = 0;
@@ -46,6 +51,11 @@ public class MapRotater : MonoBehaviour
 
     void Update()
     {
+        FadeOutTimer += Time.deltaTime;
+        if(FadeOutTimer >= FadeOutDuration)
+        {
+            FadeInOutImage.SetActive(false);
+        }
         // DetectionZone detect = enem.GetComponent<DetectionZone>();
         // Debug.Log(detect.playerNotDetected);
         if(PortalType.GetComponent<NormalEnemySpawn>() != null)
@@ -78,12 +88,13 @@ public class MapRotater : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
+        FadeInOutImage.SetActive(true);
         sceneName = scenes[Random.Range(0, scenes.Length)];
         EnemyCount = 0;
         enemyDied = 0;
         dialogBox.alpha = 1;
         dialogBox.blocksRaycasts = true;
-        FadeInOut.SetBool("Start", true);
+        FadeInOut.SetBool("End", true);
         yield return new WaitForSeconds(2f);
         Difficulty addDiff = FindObjectOfType<Difficulty>();
         addDiff.diff = addDiff.diff + multiplier;
