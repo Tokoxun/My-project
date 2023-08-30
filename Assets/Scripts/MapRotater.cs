@@ -88,7 +88,7 @@ public class MapRotater : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
-        FadeInOutImage.SetActive(false);
+        FadeInOutImage.SetActive(true);
         sceneName = scenes[Random.Range(0, scenes.Length)];
         EnemyCount = 0;
         enemyDied = 0;
