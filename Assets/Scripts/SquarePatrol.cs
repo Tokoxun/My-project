@@ -35,7 +35,8 @@ public class SquarePatrol : MonoBehaviour{
             transform.Translate(Time.deltaTime, 0.0f, 0.0f);
             playerAnim.SetBool("walkDown", false);
             playerAnim.SetBool("walkUp", false);
-            playerAnim.SetBool("walkHorizontal", true); 
+            playerAnim.SetBool("walkHorizontal", true);
+            playerSpriteImage.flipX=true; 
         }
         else if (idx == 2) {
             transform.Translate(0.0f, Time.deltaTime, 0.0f);
@@ -48,6 +49,7 @@ public class SquarePatrol : MonoBehaviour{
             playerAnim.SetBool("walkDown", false);
             playerAnim.SetBool("walkUp", false);
             playerAnim.SetBool("walkHorizontal", true);
+            playerSpriteImage.flipX=false; 
         }
     }
 }
