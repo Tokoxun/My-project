@@ -135,17 +135,13 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1656540970}
+    - target: {fileID: 8841538863751343203, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
+      propertyPath: slashRotate
+      value: 
+      objectReference: {fileID: 1413634342}
     - target: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
       propertyPath: m_LocalPosition.x
@@ -207,6 +203,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1656540970}
+    - target: {fileID: 8841538863751343230, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 1413634342}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -221,17 +221,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf08ac3f8d39c5e43b75754d07790961, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4662557 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8841538863751343228, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
-  m_PrefabInstance: {fileID: 4662555}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf6c05fb18542314ea5137372290cb8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &71657481
@@ -503,14 +492,6 @@ PrefabInstance:
       propertyPath: professor
       value: 
       objectReference: {fileID: 103094094}
-    - target: {fileID: -4492420696753614175, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
-      propertyPath: DetectionColliderRotate
-      value: 
-      objectReference: {fileID: 1557913141}
-    - target: {fileID: -4492420696753614175, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
-      propertyPath: AttackAreaColliderRotate
-      value: 
-      objectReference: {fileID: 1927955940}
     - target: {fileID: 7644260206441221204, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
       propertyPath: enemyTrigger
       value: 
@@ -562,14 +543,6 @@ PrefabInstance:
     - target: {fileID: 8408000429237511647, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
       propertyPath: m_Name
       value: Shouter Goblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469819979021964761, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469819979021964761, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1394015645
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -864,6 +837,11 @@ PolygonCollider2D:
       - {x: 1.2982721, y: 0.9728522}
       - {x: 1.04452, y: 1.1556866}
   m_UseDelaunayMesh: 0
+--- !u!4 &1413634342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1776434670107566502, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
+  m_PrefabInstance: {fileID: 4662555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421743203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,11 +1134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4066a7fd443303540bf6787525d3b6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1557913141 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8408000428804673938, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
-  m_PrefabInstance: {fileID: 767644962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1610248500 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3248357809577333959, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
@@ -1267,11 +1240,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1927955940 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8408000429551681858, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
-  m_PrefabInstance: {fileID: 767644962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1934178253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1483,22 +1451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 126045302287063960, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4662557}
     - target: {fileID: 240008881929997326, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2126930165}
-    - target: {fileID: 3248357809577333959, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_MaxValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3248357809577333959, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5190885937923863392, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1595,14 +1551,38 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6769569131435983656, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
-      propertyPath: m_Name
-      value: ShieldBar
-      objectReference: {fileID: 0}
     - target: {fileID: 7741456713217600628, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4662556}
+    - target: {fileID: 7996123699957959561, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996123699957959561, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996123699957959561, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4662556}
+    - target: {fileID: 7996123699957959561, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996123699957959561, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SlashButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996123699957959561, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharacterAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996123699957959561, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8599817029793965594, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
