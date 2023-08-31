@@ -16,6 +16,12 @@ public class CharacterAttack : MonoBehaviour
     private float timeToAttack = 0.25f;
     private float timer = 0f;
 
+    public SlashProjectile SlashPrefab;
+    public Transform Sword;
+    private float readyingSlash;
+    private float SlashCooldown = 2f;
+    private bool hadFired = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +32,7 @@ public class CharacterAttack : MonoBehaviour
 
     void Update()
     {
+        readyingSlash += Time.deltaTime;
         if(attacking)
         {
             timer += Time.deltaTime;
@@ -56,6 +63,29 @@ public class CharacterAttack : MonoBehaviour
         else if(profSpriteImage.flipX == true)
         {
             profAnim.SetBool("xAttk", true);
+        }
+    }
+
+    public void SlashButton()
+    {
+        if(readyingSlash >= SlashCooldown)
+        {
+            attacking = true;
+            profAnim.SetBool("yAttk", true);
+            if(profSpriteImage.flipX == false)
+            {
+                profAnim.SetBool("xAttk", true);
+            }
+            else if(profSpriteImage.flipX == true)
+            {
+                profAnim.SetBool("xAttk", true);
+            }
+            Instantiate(SlashPrefab, Sword.position, Sword.rotation);
+            hadFired = true;
+        }
+        if(hadFired == true && readyingSlash >= SlashCooldown)
+        {
+            readyingSlash = 0;
         }
     }
 
