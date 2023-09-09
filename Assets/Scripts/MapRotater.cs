@@ -65,6 +65,10 @@ public class MapRotater : MonoBehaviour
             {
                 StartCoroutine(LoadNextScene());
             }
+            if(enemyDied == EnemyCount && finishedSpawn == false)
+            {
+                StartCoroutine(LoadNextScene());
+            }
             TimerImage.alpha = 0;
         }
         if(PortalType.GetComponent<SurviveEnemySpawnManager>() != null)
