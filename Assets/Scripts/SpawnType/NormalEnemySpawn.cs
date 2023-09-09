@@ -23,6 +23,8 @@ public class NormalEnemySpawn : MonoBehaviour
     {
         if(EnemyIndex == enemies.Length)
         {
+            MapRotater signal = FindObjectOfType<MapRotater>();
+            signal.finishedSpawn = true;
             Destroy(gameObject);
         }
         else

@@ -19,6 +19,7 @@ public class MapRotater : MonoBehaviour
     private float FadeOutDuration = 2f;
     private float FadeOutTimer = 0f;
     public GameObject PortalType;
+    public bool finishedSpawn = false;
     public string[] scenes;
     public float multiplier = 0.1f;
     public UnityAdDisplay UnityAd;
@@ -60,7 +61,7 @@ public class MapRotater : MonoBehaviour
         // Debug.Log(detect.playerNotDetected);
         if(PortalType.GetComponent<NormalEnemySpawn>() != null)
         {
-            if(enemyDied == EnemyCount)
+            if(enemyDied == EnemyCount && finishedSpawn == true)
             {
                 StartCoroutine(LoadNextScene());
             }
