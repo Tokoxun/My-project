@@ -14,10 +14,12 @@ public class DetectionZone2 : MonoBehaviour
     private Transform professor;
     public Transform AttackAreaColliderRotate;
     public Transform DetectionColliderRotate;
+    private Rigidbody2D rb;
 
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         detection = transform.GetChild(1).gameObject;
         detection.SetActive(playerNotDetected);
         AIAnim=(Animator)GetComponent(typeof(Animator));
@@ -34,13 +36,18 @@ public class DetectionZone2 : MonoBehaviour
             detection.SetActive(playerNotDetected);
         }
     }
-    void Update()
+    void FixedUpdate()
     { 
         if(playerNotDetected == false)
         {
             ProfAndAIDistx = professor.transform.position.x - transform.position.x;
             ProfAndAIDisty = professor.transform.position.y - transform.position.y;
-            transform.Translate(new Vector2(ProfAndAIDistx * AIspeed, ProfAndAIDisty * AIspeed) * Time.deltaTime);
+            float distanceToPlayer = Vector2.Distance(transform.position, professor.position);
+            // transform.Translate(new Vector2(ProfAndAIDistx * AIspeed, ProfAndAIDisty * AIspeed) * Time.deltaTime);
+            Vector2 directionToPlayer = (professor.position - transform.position).normalized;
+            
+            // Move the enemy towards the player.
+            rb.velocity = directionToPlayer * AIspeed;
             if(ProfAndAIDistx != 0)
             {
                 AIAnim.SetBool("walkHorizontal", true);  

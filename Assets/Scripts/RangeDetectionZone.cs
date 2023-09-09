@@ -13,12 +13,15 @@ public class RangeDetectionZone : MonoBehaviour
     private bool attacks = false;
     private GameObject range;
     private Transform professor;
+    public float AIspeed = 2f;
     private float timeToAvoid;
     private float AvoidCooldown = 3f;
     private float AvoidDist = 3f;
+    private Rigidbody2D rb;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         range = transform.GetChild(0).gameObject;
         detection = transform.GetChild(1).gameObject;
         range.SetActive(attacks);
@@ -40,20 +43,19 @@ public class RangeDetectionZone : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(playerNotDetected == false)
         {
-            int profposy = Mathf.RoundToInt(professor.transform.position.y);
-            int AIposy = Mathf.RoundToInt(transform.position.y);
             ProfAndAIDist = Vector2.Distance(professor.transform.position, transform.position);
+            Vector2 directionToPlayer = (professor.position - transform.position).normalized;
             ProfAndAIDisty = professor.transform.position.y - transform.position.y;
             timeToAvoid += Time.deltaTime;
             if(ProfAndAIDist <= 5 && timeToAvoid >= AvoidCooldown)
             {    
                 if(professor.transform.position.x > transform.position.x)
                 {
-                    transform.Translate(new Vector2(transform.position.x - AvoidDist, 0) * Time.deltaTime);
+                    rb.velocity = -directionToPlayer * AvoidDist;
                     // AISpriteImage.flipX = true;
                     transform.rotation = Quaternion.Euler(0, 550, 0);
                     // AIAnim.SetBool("walking", true);
@@ -61,7 +63,7 @@ public class RangeDetectionZone : MonoBehaviour
 
                 else if(professor.transform.position.x < transform.position.x)
                 {
-                    transform.Translate(new Vector2(transform.position.x + AvoidDist, 0) * Time.deltaTime);
+                    rb.velocity = -directionToPlayer * AvoidDist;
                     // AISpriteImage.flipX = false;
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     // AIAnim.SetBool("walking", true);
@@ -83,6 +85,10 @@ public class RangeDetectionZone : MonoBehaviour
                     // AIAnim.SetBool("walking", false);
                     timeToAvoid = 0;
                 }
+            }
+            if(timeToAvoid <= AvoidCooldown)
+            {
+                rb.velocity = directionToPlayer * AIspeed;
             }
 
             transform.Translate(new Vector2(0, ProfAndAIDisty) * Time.deltaTime);
