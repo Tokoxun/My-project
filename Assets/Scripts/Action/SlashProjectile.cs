@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class SlashProjectile : MonoBehaviour
 {
+    public float pushForce = 10f; // Adjust this value to control the strength of the push.
+    private Rigidbody2D rb;
     private float speed = 5f;
     private float timeBeforeDespawn;
     private float despawnTime = 2f;
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Update is called once per frame
     private void Update()
     {
@@ -24,14 +30,13 @@ public class SlashProjectile : MonoBehaviour
     {
         if (col.gameObject.tag == "enemy")
         {
-            // Calculate the direction from this object to the moving object
-            Vector3 pushDirection = col.transform.position - transform.position;
-
             // Get the Rigidbody of the moving object
             Rigidbody2D movingObjectRb = col.GetComponent<Rigidbody2D>();
 
+            // Calculate the direction from this object to the moving object
+            Vector2 pushDirection = (movingObjectRb.position - rb.position).normalized;
+
             // Apply a force to the moving object to simulate pushing
-            float pushForce = 1.5f; // Adjust as needed
             movingObjectRb.AddForce(pushDirection.normalized * pushForce, ForceMode2D.Impulse);
         }
         if(col.gameObject.tag == "Projectile")
