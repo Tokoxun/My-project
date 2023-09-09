@@ -96,7 +96,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &809111714509382289
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,7 +113,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &809111714509382288
 Rigidbody2D:
   serializedVersion: 4
@@ -128,13 +129,19 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!61 &809111714509382287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,6 +152,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -175,7 +201,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   armor: 1
-  enemyLeft: {fileID: 2260348136337775343, guid: e2adef2803acc7b43aa692aca8b90ce2, type: 3}
 --- !u!114 &809111714509382284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIspeed: 2
-  professor: {fileID: 8841538863751343204, guid: 58c39733980f3f3439a90161f6cc1388, type: 3}
   AttackAreaColliderRotate: {fileID: 809111714824726008}
   DetectionColliderRotate: {fileID: 809111714605394684}
 --- !u!114 &809111714509382292
@@ -258,6 +282,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -278,6 +321,7 @@ PolygonCollider2D:
       - {x: -0.50698423, y: -0.7563752}
       - {x: 0.17466834, y: -0.7776957}
       - {x: 0.7380641, y: -0.50721645}
+  m_UseDelaunayMesh: 0
 --- !u!1 &809111714605394683
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +364,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -340,6 +403,7 @@ PolygonCollider2D:
       - {x: -0.43149707, y: -0.94885397}
       - {x: 0.25053182, y: -0.9653054}
       - {x: 0.7042858, y: -0.71919507}
+  m_UseDelaunayMesh: 0
 --- !u!1 &809111714824726007
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eac5307a079bbb4faea59c6a86e05d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 3
 --- !u!60 &809111714824726010
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -395,6 +460,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -415,3 +499,4 @@ PolygonCollider2D:
       - {x: -0.50698423, y: -0.7563752}
       - {x: 0.17466834, y: -0.7776957}
       - {x: 0.7380641, y: -0.50721645}
+  m_UseDelaunayMesh: 0
