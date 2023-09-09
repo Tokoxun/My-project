@@ -1946,7 +1946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408000429237511644, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
       propertyPath: m_Constraints
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8408000429237511647, guid: 6927f8a754a213a41956d5cb17bf62b1, type: 3}
       propertyPath: m_Name
