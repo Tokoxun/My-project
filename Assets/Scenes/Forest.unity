@@ -647,6 +647,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: pauseControl
       objectReference: {fileID: 0}
+    - target: {fileID: 2437383093942548817, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 692436559}
+    - target: {fileID: 2437383093942548817, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadScene
+      objectReference: {fileID: 0}
     - target: {fileID: 5190885937923863392, guid: 5fede8b6ad9b33a448ae79e6e4b57a0b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
