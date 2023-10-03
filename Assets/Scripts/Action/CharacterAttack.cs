@@ -18,6 +18,7 @@ public class CharacterAttack : MonoBehaviour
 
     public SlashProjectile SlashPrefab;
     public Transform Sword;
+    public Transform SwordProjectile;
     private float readyingSlash;
     private float SlashCooldown = 2f;
     private bool hadFired = false;
@@ -80,7 +81,7 @@ public class CharacterAttack : MonoBehaviour
             {
                 profAnim.SetBool("xAttk", true);
             }
-            Instantiate(SlashPrefab, Sword.position, Sword.rotation);
+            Instantiate(SlashPrefab, SwordProjectile.position, Sword.rotation);
             hadFired = true;
         }
         if(hadFired == true && readyingSlash >= SlashCooldown)

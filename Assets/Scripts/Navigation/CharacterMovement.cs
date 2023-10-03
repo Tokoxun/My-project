@@ -40,12 +40,12 @@ public class CharacterMovement : MonoBehaviour{
         if(PlayerVertical>0){ 
         playerAnim.SetInteger("yMove",1);
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180); 
-        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
+        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if(PlayerVertical<0){ 
         playerAnim.SetInteger("yMove",-1);
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0); 
-        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
+        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
         }
 
         }
@@ -57,14 +57,14 @@ public class CharacterMovement : MonoBehaviour{
         playerAnim.SetBool("xMove",true); 
         playerSpriteImage.flipX=false; 
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
-        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
+        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
       else if(PlayerHorizontal<0){ 
         playerAnim.SetBool("xMove",true); 
         playerSpriteImage.flipX=true; 
         colliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
-        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
+        slashRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
         }
       else{ 
         playerAnim.SetBool("xMove",false); 
