@@ -18,7 +18,7 @@ public class SlashProjectile : MonoBehaviour
     private void Update()
     {
         timeBeforeDespawn += Time.deltaTime;
-        transform.position += -transform.right * Time.deltaTime * speed;
+        transform.position += transform.right * Time.deltaTime * speed;
         if(timeBeforeDespawn >= despawnTime)
         {
             Destroy(gameObject);
