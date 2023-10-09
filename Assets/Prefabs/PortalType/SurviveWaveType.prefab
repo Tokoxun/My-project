@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8930488539746301395}
   - component: {fileID: 8930488539746301397}
-  - component: {fileID: 8930488539746301396}
+  - component: {fileID: 2649964743297285872}
   m_Layer: 0
   m_Name: SurviveWaveType
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8930488539746301396
+--- !u!114 &2649964743297285872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce57813dd1c0a4847820cff1f2758833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 5
-  spawnDelay: 3
+  spawnTime: 2.3
+  spawnDelay: 1
   enemies:
+  - {fileID: 8408000429237511647, guid: 9965d080e6985774b9fc6bc0f906f9eb, type: 3}
   - {fileID: 8408000429237511647, guid: 9965d080e6985774b9fc6bc0f906f9eb, type: 3}
   - {fileID: 7416396114853065106, guid: fc85e09341094e24e8c695e823120b34, type: 3}
   - {fileID: 809111714509382282, guid: 7afbc2d9f608bed4993262db6ccf7412, type: 3}
