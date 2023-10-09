@@ -16,6 +16,8 @@ public class NormalEnemySpawn : MonoBehaviour
 
     void Start()
     {
+        MapRotater signal2 = FindObjectOfType<MapRotater>();
+        signal2.NormalStart = true;
         InvokeRepeating("Spawn", spawnDelay, spawnTime);
     }
 
