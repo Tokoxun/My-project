@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2306090161740477494}
   - component: {fileID: 2306090161740477489}
-  - component: {fileID: 2306090161740477488}
+  - component: {fileID: 4350789290814495184}
   - component: {fileID: 3773210872237166059}
   m_Layer: 0
   m_Name: EnemyWaveSpawn
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2306090161740477488
+--- !u!114 &4350789290814495184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,14 +98,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cf381c290292c4a903b047b1a0fad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 5
-  spawnDelay: 3
+  spawnTime: 2.5
+  spawnDelay: 1
   enemies:
+  - {fileID: 8408000429237511647, guid: 9965d080e6985774b9fc6bc0f906f9eb, type: 3}
   - {fileID: 8408000429237511647, guid: 9965d080e6985774b9fc6bc0f906f9eb, type: 3}
   - {fileID: 809111714509382282, guid: 7afbc2d9f608bed4993262db6ccf7412, type: 3}
   - {fileID: 7416396114853065106, guid: fc85e09341094e24e8c695e823120b34, type: 3}
+  - {fileID: 8408000429237511647, guid: 9965d080e6985774b9fc6bc0f906f9eb, type: 3}
+  - {fileID: 7416396114853065106, guid: fc85e09341094e24e8c695e823120b34, type: 3}
   - {fileID: 7416396114853065106, guid: fc85e09341094e24e8c695e823120b34, type: 3}
   - {fileID: 809111714509382282, guid: 7afbc2d9f608bed4993262db6ccf7412, type: 3}
+  - {fileID: 8408000429237511647, guid: 9965d080e6985774b9fc6bc0f906f9eb, type: 3}
+  - {fileID: 7416396114853065106, guid: fc85e09341094e24e8c695e823120b34, type: 3}
 --- !u!61 &3773210872237166059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -116,6 +121,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
