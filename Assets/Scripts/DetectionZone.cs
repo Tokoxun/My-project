@@ -9,7 +9,7 @@ public class DetectionZone : MonoBehaviour
     public float AIspeed = 2f;
     private float ProfAndAIDistx;
     private float ProfAndAIDisty;
-    public bool playerNotDetected = true;
+    public bool ChasingPlayer = false;
     private GameObject detection = default;
     private Transform professor;
     public Transform AttackAreaColliderRotate;
@@ -20,7 +20,7 @@ public class DetectionZone : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         detection = transform.GetChild(1).gameObject;
-        detection.SetActive(playerNotDetected);
+        detection.SetActive(true);
         AIAnim=(Animator)GetComponent(typeof(Animator));
         AISpriteImage =(SpriteRenderer)GetComponent(typeof(SpriteRenderer));
     }
@@ -30,14 +30,14 @@ public class DetectionZone : MonoBehaviour
         if (collider.gameObject.tag == "Ally")
         {
             professor = collider.transform;
-            playerNotDetected = false;
-            detection.SetActive(playerNotDetected);
+            ChasingPlayer = true;
+            detection.SetActive(false);
         }
     }
 
     void FixedUpdate()
     {
-        if(playerNotDetected == false)
+        if(ChasingPlayer == true)
         {
             ProfAndAIDistx = professor.transform.position.x - transform.position.x;
             ProfAndAIDisty = professor.transform.position.y - transform.position.y;
