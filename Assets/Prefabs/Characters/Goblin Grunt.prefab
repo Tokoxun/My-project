@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8408000428804673938}
   - component: {fileID: 8408000428804673937}
+  - component: {fileID: 6356077887480133251}
   m_Layer: 0
   m_Name: Detection Range
   m_TagString: Untagged
@@ -85,6 +86,19 @@ PolygonCollider2D:
       - {x: 0.51947916, y: -0.74639994}
       - {x: 0.7318978, y: -0.6029761}
   m_UseDelaunayMesh: 0
+--- !u!114 &6356077887480133251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408000428804673939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe5616dc7fb327468f62e5479ef4735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goblinMove: {fileID: 8639407223996080423}
 --- !u!1 &8408000429237511647
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +115,7 @@ GameObject:
   - component: {fileID: 8408000429237511639}
   - component: {fileID: 8408000429237511637}
   - component: {fileID: 440026760129290609}
-  - component: {fileID: 5205417409570866313}
+  - component: {fileID: 8639407223996080423}
   m_Layer: 0
   m_Name: Goblin Grunt
   m_TagString: enemy
@@ -308,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
---- !u!114 &5205417409570866313
+--- !u!114 &8639407223996080423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,11 +331,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8408000429237511647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe5616dc7fb327468f62e5479ef4735, type: 3}
+  m_Script: {fileID: 11500000, guid: 690de2190de76ce4592ae8a621978506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AIspeed: 2
-  playerNotDetected: 1
+  ChasingPlayer: 0
+  playerSpotted: 0
+  professor: {fileID: 0}
   AttackAreaColliderRotate: {fileID: 8408000429551681858}
   DetectionColliderRotate: {fileID: 8408000428804673938}
 --- !u!1 &8408000429551681859
@@ -334,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8408000429551681858}
   - component: {fileID: 8408000429551681857}
-  - component: {fileID: 8408000429551681856}
+  - component: {fileID: 5513034391061131709}
   m_Layer: 0
   m_Name: EnemyAtkRange
   m_TagString: Untagged
@@ -407,7 +423,7 @@ PolygonCollider2D:
       - {x: 0.49089253, y: -0.9890945}
       - {x: 0.09305453, y: 0.026628315}
   m_UseDelaunayMesh: 0
---- !u!114 &8408000429551681856
+--- !u!114 &5513034391061131709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
