@@ -13,7 +13,6 @@ public class GoblinMovement : MonoBehaviour
     public bool playerSpotted = false;
     public Transform professor;
     public Transform AttackAreaColliderRotate;
-    public Transform DetectionColliderRotate;
     private Rigidbody2D rb;
     private Vector2 stopVelocity;
 
@@ -50,14 +49,12 @@ public class GoblinMovement : MonoBehaviour
                     AIAnim.SetBool("walkUp", true);
                     AIAnim.SetBool("walkDown", false);
                     AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
-                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
                 else if(ProfAndAIDisty < 0)
                 {
                     AIAnim.SetBool("walkDown", true);
                     AIAnim.SetBool("walkUp", false);
                     AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
-                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
             }
 
@@ -71,14 +68,12 @@ public class GoblinMovement : MonoBehaviour
                     AIAnim.SetBool("walkHorizontal", true);
                     AISpriteImage.flipX = true;
                     AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
-                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
                 else if (ProfAndAIDistx < 0)
                 {
                     AIAnim.SetBool("walkHorizontal", true);
                     AISpriteImage.flipX = false;
                     AttackAreaColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
-                    DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
                 }
                 else
                 {
