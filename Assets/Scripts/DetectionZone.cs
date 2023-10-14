@@ -6,6 +6,7 @@ public class DetectionZone : MonoBehaviour
 {
     public GoblinMovement goblinMove;
     private GameObject detection = default;
+    public GameObject patrolType;
 
     void Start()
     {
@@ -16,12 +17,20 @@ public class DetectionZone : MonoBehaviour
     {
         if (collider.gameObject.tag == "Ally")
         {
+            if (patrolType.GetComponentInParent<SquarePatrol>() != null)
+            {
+                SquarePatrol stopPatrol = GetComponentInParent<SquarePatrol>();
+                stopPatrol.enabled = false;
+            }
+            if (patrolType.GetComponentInParent<TrianglePatrol>() != null)
+            {
+                TrianglePatrol stopPatrol = GetComponentInParent<TrianglePatrol>();
+                stopPatrol.enabled = false;
+            }
             goblinMove.professor = collider.transform;
             goblinMove.ChasingPlayer = true;
             goblinMove.playerSpotted = true;
             detection.SetActive(false);
-            SquarePatrol stopPatrol = GetComponentInParent<SquarePatrol>();
-            stopPatrol.enabled = false;
         }
     }
 }
