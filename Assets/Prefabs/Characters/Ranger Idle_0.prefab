@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8204eee5507995a49ac232e51532ced3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AIspeed: 2
 --- !u!114 &-1636360370564202512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,9 +423,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.031971164, y: 0.04249549}
-      - {x: -0.40155652, y: -0.17656665}
-      - {x: -0.18195297, y: -0.3735093}
-      - {x: 0.21763006, y: -0.3641129}
-      - {x: 0.48483062, y: -0.1850408}
+    - - {x: 0.045113713, y: 0.04249549}
+      - {x: -0.37855706, y: -0.1469959}
+      - {x: -0.16552478, y: -0.3406529}
+      - {x: 0.20448753, y: -0.33454219}
+      - {x: 0.4519743, y: -0.1390419}
   m_UseDelaunayMesh: 0
