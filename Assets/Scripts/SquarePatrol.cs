@@ -10,6 +10,7 @@ public class SquarePatrol : MonoBehaviour{
     private SpriteRenderer playerSpriteImage;
     // Animator component for the player 
     private Animator playerAnim;
+    public Transform DetectionColliderRotate;
 
 
     // Compute the translation vector for the next frame
@@ -30,6 +31,7 @@ public class SquarePatrol : MonoBehaviour{
             playerAnim.SetBool("walkDown", true);
             playerAnim.SetBool("walkUp", false);
             playerAnim.SetBool("walkHorizontal", false);
+            DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (idx == 1) {
             transform.Translate(Time.deltaTime, 0.0f, 0.0f);
@@ -37,12 +39,14 @@ public class SquarePatrol : MonoBehaviour{
             playerAnim.SetBool("walkUp", false);
             playerAnim.SetBool("walkHorizontal", true);
             playerSpriteImage.flipX=true; 
+            DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (idx == 2) {
             transform.Translate(0.0f, Time.deltaTime, 0.0f);
             playerAnim.SetBool("walkDown", false);
             playerAnim.SetBool("walkUp", true);
             playerAnim.SetBool("walkHorizontal", false);
+            DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 180);
         }
         else {
             transform.Translate(-1 * Time.deltaTime, 0.0f, 0.0f);
@@ -50,6 +54,7 @@ public class SquarePatrol : MonoBehaviour{
             playerAnim.SetBool("walkUp", false);
             playerAnim.SetBool("walkHorizontal", true);
             playerSpriteImage.flipX=false; 
+            DetectionColliderRotate.transform.rotation = Quaternion.Euler(0, 0, 270);
         }
     }
 }
