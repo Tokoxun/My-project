@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e03133674c72d54991cc8209c2e6f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DetectionColliderRotate: {fileID: 8408000428804673938}
 --- !u!114 &8408000429237511637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,10 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe5616dc7fb327468f62e5479ef4735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIspeed: 2
-  playerNotDetected: 1
-  AttackAreaColliderRotate: {fileID: 8408000429551681858}
-  DetectionColliderRotate: {fileID: 8408000428804673938}
+  goblinMove: {fileID: 0}
 --- !u!1 &8408000429551681859
 GameObject:
   m_ObjectHideFlags: 0
