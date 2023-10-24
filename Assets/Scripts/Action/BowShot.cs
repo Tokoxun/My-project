@@ -19,10 +19,10 @@ public class BowShot : MonoBehaviour
         {
             Instantiate(ProjectilePrefab, Bow.position, transform.rotation);
             hadFired = true;
-            AIAnim.SetBool("attacking", false);
         }
         if(hadFired == true && readyingShot >= ShotCooldown)
         {
+            AIAnim.SetBool("attacking", false);
             readyingShot = 0;
         }
     }
