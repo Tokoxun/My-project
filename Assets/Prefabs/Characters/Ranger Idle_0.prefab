@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpotted: 0
   ChasingPlayer: 0
+  range: {fileID: 0}
   professor: {fileID: 0}
   AIspeed: 2
 --- !u!1 &7416396115243883144
@@ -320,6 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 7506491294578112940, guid: 6ab9bd793e9c0794c99c174ddbf809af, type: 3}
   Bow: {fileID: 7416396116113578534}
+  AIAnim: {fileID: 7416396114853065101}
 --- !u!1 &7416396116113578535
 GameObject:
   m_ObjectHideFlags: 0
