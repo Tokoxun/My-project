@@ -31,7 +31,6 @@ public class TankAttackArea : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(haveStoped);
         if(haveStoped)
         {
             timeStoped += Time.deltaTime;
