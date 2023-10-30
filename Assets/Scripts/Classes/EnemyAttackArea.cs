@@ -31,7 +31,6 @@ public class EnemyAttackArea : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(haveStoped);
         if(haveStoped)
         {
             timeStoped += Time.deltaTime;
