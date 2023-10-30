@@ -10,6 +10,7 @@ public class EnemyAttack2 : MonoBehaviour
     private float attackTimer = 1f;
     private float timer = 0f;
     private GameObject atkRange = default;
+    private bool atk = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +27,23 @@ public class EnemyAttack2 : MonoBehaviour
         {
             Debug.Log("attacked");
             AIAnim.SetBool("attacking", true);
-            atkRange.SetActive(true);
+            atkRange.SetActive(false);
+            atk = true;
+        }
+    }
+
+    void Update()
+    {
+        if(atk)
+        {
             timer += Time.deltaTime;
             if(timer >= attackTimer)
             {
                 Debug.Log("Atk finished");
                 timer = 0;
                 AIAnim.SetBool("attacking", false);
-                atkRange.SetActive(false);
+                atkRange.SetActive(true);
+                atk = false;
             }
         }
     }
