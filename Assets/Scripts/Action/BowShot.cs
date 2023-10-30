@@ -9,21 +9,33 @@ public class BowShot : MonoBehaviour
     private float readyingShot;
     private float ShotCooldown = 2f;
     private bool hadFired = false;
+    public Animator AIAnim;
+    private float animTrigger = 1f;
+    private float triggerCooldown;
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        var AIAnim = GetComponentInParent<Animator>();
-        readyingShot += Time.deltaTime;
-        AIAnim.SetBool("attacking", true);
-        if(col.CompareTag("Ally") && readyingShot >= ShotCooldown)
+        if(col.CompareTag("Ally"))
         {
-            Instantiate(ProjectilePrefab, Bow.position, transform.rotation);
             hadFired = true;
         }
-        if(hadFired == true && readyingShot >= ShotCooldown)
+    }
+
+    void Update()
+    {
+        readyingShot += Time.deltaTime;
+        if(readyingShot >= ShotCooldown)
         {
-            AIAnim.SetBool("attacking", false);
-            readyingShot = 0;
+            triggerCooldown += Time.deltaTime;
+            AIAnim.SetBool("attacking", true);
+            if(hadFired && triggerCooldown >= animTrigger)
+            {
+                Instantiate(ProjectilePrefab, Bow.position, transform.rotation);
+                AIAnim.SetBool("attacking", false);
+                readyingShot = 0;
+                triggerCooldown = 0;
+                hadFired = false;
+            }
         }
     }
 }
