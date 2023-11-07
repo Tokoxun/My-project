@@ -20,6 +20,7 @@ public class MapRotater : MonoBehaviour
     private float FadeOutTimer = 0f;
     public GameObject PortalType;
     public bool finishedSpawn = false;
+    public bool NormalStart = false;
     public string[] scenes;
     public float multiplier = 0.1f;
     public UnityAdDisplay UnityAd;
@@ -65,7 +66,7 @@ public class MapRotater : MonoBehaviour
             {
                 StartCoroutine(LoadNextScene());
             }
-            if(enemyDied == EnemyCount && finishedSpawn == false)
+            if(enemyDied == EnemyCount && NormalStart == false)
             {
                 StartCoroutine(LoadNextScene());
             }
