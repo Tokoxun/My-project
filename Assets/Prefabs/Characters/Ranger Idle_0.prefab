@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7416396114853065103}
   - component: {fileID: 7416396114853065100}
   - component: {fileID: 7416396114853065101}
-  - component: {fileID: 7416396114853065096}
   - component: {fileID: -1636360370564202512}
   - component: {fileID: 7836113860184825803}
+  - component: {fileID: 7402469283812831408}
   m_Layer: 0
   m_Name: Ranger Idle_0
   m_TagString: enemy
@@ -186,18 +186,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7416396114853065096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7416396114853065106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8204eee5507995a49ac232e51532ced3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-1636360370564202512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80544735d94847046b5d58ded9dde5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DetectionColliderRotate: {fileID: 7416396116156052205}
 --- !u!114 &7836113860184825803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +212,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+--- !u!114 &7402469283812831408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416396114853065106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac16bb87e9f9e44b9616c27769cc669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpotted: 0
+  ChasingPlayer: 0
+  range: {fileID: 0}
+  professor: {fileID: 0}
+  AIspeed: 2
 --- !u!1 &7416396115243883144
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 7506491294578112940, guid: 6ab9bd793e9c0794c99c174ddbf809af, type: 3}
   Bow: {fileID: 7416396116113578534}
+  AIAnim: {fileID: 7416396114853065101}
 --- !u!1 &7416396116113578535
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7416396116156052205}
   - component: {fileID: 7416396116156052207}
+  - component: {fileID: 6154208805194527553}
   m_Layer: 0
   m_Name: DetectionZone
   m_TagString: Untagged
@@ -422,9 +430,22 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.031971164, y: 0.04249549}
-      - {x: -0.40155652, y: -0.17656665}
-      - {x: -0.18195297, y: -0.3735093}
-      - {x: 0.21763006, y: -0.3641129}
-      - {x: 0.48483062, y: -0.1850408}
+    - - {x: 0.045113713, y: 0.04249549}
+      - {x: -0.37855706, y: -0.1469959}
+      - {x: -0.16552478, y: -0.3406529}
+      - {x: 0.20448753, y: -0.33454219}
+      - {x: 0.4519743, y: -0.1390419}
   m_UseDelaunayMesh: 0
+--- !u!114 &6154208805194527553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416396116156052210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8204eee5507995a49ac232e51532ced3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeMove: {fileID: 7402469283812831408}

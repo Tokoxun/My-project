@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8408000428804673938}
   - component: {fileID: 8408000428804673937}
+  - component: {fileID: 6356077887480133251}
   m_Layer: 0
   m_Name: Detection Range
   m_TagString: Untagged
@@ -77,14 +78,28 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.006625071, y: -0.032004714}
-      - {x: -0.68757737, y: -0.5926182}
-      - {x: -0.38240832, y: -0.8010787}
+      - {x: -0.6679803, y: -0.5163009}
+      - {x: -0.37750906, y: -0.7658553}
       - {x: -0.0670043, y: -0.8646873}
-      - {x: 0.13470897, y: -0.865604}
-      - {x: 0.35916132, y: -0.7962838}
-      - {x: 0.51947916, y: -0.74639994}
-      - {x: 0.7318978, y: -0.6029761}
+      - {x: 0.10531336, y: -0.86560386}
+      - {x: 0.33466494, y: -0.7786721}
+      - {x: 0.39699754, y: -0.7287883}
+      - {x: 0.65840876, y: -0.4796943}
   m_UseDelaunayMesh: 0
+--- !u!114 &6356077887480133251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408000428804673939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe5616dc7fb327468f62e5479ef4735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goblinMove: {fileID: 8639407223996080423}
+  patrolType: {fileID: 0}
 --- !u!1 &8408000429237511647
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +116,7 @@ GameObject:
   - component: {fileID: 8408000429237511639}
   - component: {fileID: 8408000429237511637}
   - component: {fileID: 440026760129290609}
-  - component: {fileID: 5205417409570866313}
+  - component: {fileID: 8639407223996080423}
   m_Layer: 0
   m_Name: Goblin Grunt
   m_TagString: enemy
@@ -283,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e03133674c72d54991cc8209c2e6f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DetectionColliderRotate: {fileID: 8408000428804673938}
 --- !u!114 &8408000429237511637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
---- !u!114 &5205417409570866313
+--- !u!114 &8639407223996080423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,13 +333,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8408000429237511647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe5616dc7fb327468f62e5479ef4735, type: 3}
+  m_Script: {fileID: 11500000, guid: 690de2190de76ce4592ae8a621978506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AIspeed: 2
-  playerNotDetected: 1
+  ChasingPlayer: 0
+  playerSpotted: 0
+  professor: {fileID: 0}
   AttackAreaColliderRotate: {fileID: 8408000429551681858}
-  DetectionColliderRotate: {fileID: 8408000428804673938}
 --- !u!1 &8408000429551681859
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8408000429551681858}
   - component: {fileID: 8408000429551681857}
-  - component: {fileID: 8408000429551681856}
+  - component: {fileID: 5513034391061131709}
   m_Layer: 0
   m_Name: EnemyAtkRange
   m_TagString: Untagged
@@ -349,8 +366,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408000429551681859}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11400002, y: -0.142, z: 0.25253817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.001, y: -0.022, z: 0.25253817}
   m_LocalScale: {x: 0.270945, y: 0.3246607, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,13 +418,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.08769512, y: 0.13748777}
-      - {x: -0.08529335, y: 0.09302965}
-      - {x: -0.6799912, y: -0.9992}
-      - {x: 0.49089253, y: -0.9890945}
-      - {x: 0.09305453, y: 0.026628315}
+    - - {x: -0.0011115074, y: 0.11699426}
+      - {x: -0.060801566, y: 0.08486524}
+      - {x: -0.38095453, y: -0.5491042}
+      - {x: -0.01768204, y: -1.0929492}
+      - {x: 0.3607428, y: -0.55212116}
+      - {x: 0.06532626, y: 0.009843569}
   m_UseDelaunayMesh: 0
---- !u!114 &8408000429551681856
+--- !u!114 &5513034391061131709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

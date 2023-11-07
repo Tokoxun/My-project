@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttackArea : MonoBehaviour
+public class TankAttackArea : MonoBehaviour
 {
     private float stoppingTime = 1f;
     private float timeStoped = 0f;
@@ -18,7 +18,7 @@ public class EnemyAttackArea : MonoBehaviour
     {
         if(collider.gameObject.tag == "Ally")
         {
-            GoblinMovement stopMove = GetComponentInParent<GoblinMovement>();
+            TankMovement stopMove = GetComponentInParent<TankMovement>();
             stopMove.ChasingPlayer = false;
             haveStoped = true; 
         }
@@ -37,7 +37,7 @@ public class EnemyAttackArea : MonoBehaviour
             if(timeStoped >= stoppingTime)
             {
                 timeStoped = 0;
-                GoblinMovement stopMove = GetComponentInParent<GoblinMovement>();
+                TankMovement stopMove = GetComponentInParent<TankMovement>();
                 stopMove.ChasingPlayer = true;
                 haveStoped = false;
             }
